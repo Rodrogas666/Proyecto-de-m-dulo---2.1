@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.padre{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    height: 33rem;
+    gap: 2rem;
+
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.imagen{
+    height: auto;
+    max-width: 27rem;
+    width: auto;
+}
+
+img{
+    height: auto;
+    width: auto;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    gap: 4.5rem;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+
+#uno{
+    background-color: #F76313;
+    color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    height: 3rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+#uno:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+#telefono{
+    width: 30px;
+    height: 25px;
+    
+}
+
+#dos{
+    background-color: transparent;
+    color:black;
+    border-color: transparent;
+    cursor: pointer;
+
+
+}
+
+.cositas{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#checkbox1{
+    accent-color: #F76313;
+    
+}
+
+#checkbox2{
+    accent-color: #F76313;
+}
+
+.padretocho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: auto;
+    max-height: auto;
+    gap: 4rem;
+}
+
+.padre2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 1.5rem;
+    background-color: #FFEFDE80;
+    width: 100%;
+}
+
+.cartas{
+    display: flex;
+    flex-direction: row;
+}
+
+.sub2{
+    width: auto;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cart{
+    background-color: white;
+    border-color: transparent;
+    border-radius: 44px;
+    width: 280px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart:hover{
+    background-color: #F76313;
+    color: white;
+
+}
+
+.cartas{
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#img1{
+    height: 46px;
+    width: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#img2{
+    height: 46px;
+    width: 62px;
+}
+
+#img3{
+    height: 46px;
+    width: 62px;
+}
+
+#img4{
+    height: 46px;
+    width: 62px;
+}
+
+#tres{
+    background-color: #F76313;
+    color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    height: 3rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+#tres:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+.boton2{
+    margin-top: 2rem;
+}
+
+.padre3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #FFF4EA;
+}
+
+.sub3{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2.5rem;
+    
+}
+.cards-img{
+    display: flex;
+    flex-direction: column;
+    border-radius: 23px;
+    background-color: #FFE4C8;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    text-align: center;    
+    height: 20rem;
+    overflow: hidden;
+    width: 15rem;
+    gap: 1.5rem;
+}
+
+#personas{
+    height: 10rem;
+    border-radius: 4rem;
+    max-width: 12rem;
+}
+
+#boton3{
+    background-color: #FF5B2E;
+    max-width: 8rem;
+    border-radius:  1rem;
+    border-color: transparent;
+    width: 120px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+#boton3:hover{
+    background-color: transparent;
+    border-color: black;
+    color: black;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
