@@ -210,7 +210,7 @@ img{
     justify-content: center;
     flex-direction: column;
     gap: 3rem;
-    background-color: #FFF4EA;
+
 }
 
 .sub3{
@@ -253,6 +253,94 @@ img{
 }
 
 #boton3:hover{
+    background-color: transparent;
+    border-color: black;
+    color: black;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.padre4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF4EA;
+    width: 100%;
+}
+
+.sub4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 30rem;
+
+}
+
+.lado1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 35rem;
+    height: 25rem;
+    gap: 2.5rem;
+}
+
+
+
+.lado2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 45rem;
+    background-color: white;
+    height: 25rem;
+    border-radius: 16px;
+    gap: 3rem;
+}
+
+.lado2-0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    gap: 3rem;
+    width: 13rem;
+}
+
+.texl1{
+    display: flex;
+    text-align: start;
+
+}
+
+.perrito-img{
+    display: flex;
+    height: 17rem;
+    width: 15rem;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+#perrito-img{
+    height: 15rem;
+}
+
+#boton4{
+    background-color: #FF5B2E;
+    max-width: 8rem;
+    border-radius:  1rem;
+    border-color: transparent;
+    width: 120px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+#boton4:hover{
     background-color: transparent;
     border-color: black;
     color: black;
