@@ -10,7 +10,6 @@
 </head>
 
 <body>
-<!--QUE RICO EL SEXO-->
     <div class="padretocho">
         <div class="padre">
             <div class="sub">
