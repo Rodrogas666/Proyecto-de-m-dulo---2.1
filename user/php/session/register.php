@@ -5,9 +5,11 @@ include_once '../../../config/bd.php';
 //Hace la conexión a la base de datos
 $conexionBD = BD::crearInstancia();
 
-if (isset($_POST)) {
+// print_r($_POST);
 
-    if ($_POST['nombre']!='' || $_POST['apellido']!='' || $_POST['correo']!='' || $_POST['password']!='') {
+if ($_POST) {
+
+    if ($_POST['nombre']!= '' || $_POST['apellido']!= '' || $_POST['correo']!= '' || $_POST['password']!= '') {
 
             $nombre = $_POST['nombre'];
             $apellido = $_POST['apellido'];

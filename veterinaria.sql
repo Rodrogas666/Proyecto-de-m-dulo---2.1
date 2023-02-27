@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-02-2023 a las 15:36:35
+-- Tiempo de generación: 27-02-2023 a las 19:58:55
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -29,9 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citas` (
   `id` int NOT NULL,
-  `tipo` varchar(255) NOT NULL,
-  `motivo` text NOT NULL,
-  `fecha` date NOT NULL,
+  `asunto` text NOT NULL,
+  `fecha` datetime NOT NULL,
   `estado` varchar(255) NOT NULL,
   `id_cliente` int NOT NULL,
   `id_veterinario` int NOT NULL,
@@ -52,6 +51,14 @@ CREATE TABLE `cliente` (
   `contrasenia` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nombre`, `apellido`, `correo`, `contrasenia`) VALUES
+(1, 'Leandro', 'Valencia', 'quinterosmachista@gmail.com', '12345'),
+(2, 'Lucas', 'Jimenez', 'machado@gmail.com', 'machado');
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +68,18 @@ CREATE TABLE `cliente` (
 CREATE TABLE `clientemascotas` (
   `id` int NOT NULL,
   `id_mascota` int NOT NULL,
+  `id_cliente` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `emergencias`
+--
+
+CREATE TABLE `emergencias` (
+  `id` int NOT NULL,
+  `hora` datetime NOT NULL,
   `id_cliente` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -135,6 +154,13 @@ ALTER TABLE `clientemascotas`
   ADD KEY `id_cliente` (`id_cliente`);
 
 --
+-- Indices de la tabla `emergencias`
+--
+ALTER TABLE `emergencias`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_cliente` (`id_cliente`);
+
+--
 -- Indices de la tabla `mascota`
 --
 ALTER TABLE `mascota`
@@ -168,12 +194,18 @@ ALTER TABLE `citas`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `clientemascotas`
 --
 ALTER TABLE `clientemascotas`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `emergencias`
+--
+ALTER TABLE `emergencias`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
@@ -212,6 +244,12 @@ ALTER TABLE `citas`
 ALTER TABLE `clientemascotas`
   ADD CONSTRAINT `clientemascotas_ibfk_1` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `clientemascotas_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `emergencias`
+--
+ALTER TABLE `emergencias`
+  ADD CONSTRAINT `emergencias_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `registro_medico`

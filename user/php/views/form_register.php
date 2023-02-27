@@ -28,7 +28,7 @@
 
         <br><br>
 
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit">Register</button>
     </form>
 
 </body>

@@ -8,7 +8,7 @@
     <br>
 
     <label for="">Fecha</label>
-    <input type="date" name="fecha" id="fecha">
+    <input type="datetime-local" name="fecha" id="fecha">
 
     <br><br>
     
@@ -22,4 +22,7 @@
         <option value="">Zeus</option>
         <option value="">Canelon</option>
     </select>
+
+    <br><br>
+    <button type="submit">Agregar cita</button>
 </form>
