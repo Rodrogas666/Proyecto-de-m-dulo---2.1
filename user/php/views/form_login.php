@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +15,9 @@ session_start();
 <body>
     LOGIN
     <br><br>
-    <form action="home.php" method="post">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario" placeholder="usuario">
+    <form action="../session/login.php" method="post">
+        <label for="usuario">Correo</label>
+        <input type="text" name="correo" id="correo" placeholder="correo">
 
         <br><br>
 
