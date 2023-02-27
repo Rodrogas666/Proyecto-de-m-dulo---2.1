@@ -11,14 +11,20 @@
 <body>
     REGISTER
     <br><br>
-    <form action="" method="post">
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario" placeholder="usuario">
+    <form action="../session/register.php" method="post">
 
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="nombre">
         <br><br>
-
+        <label for="password">Apellido</label>
+        <input type="text" name="apellido" id="apellido" placeholder="apellido">
+        <br><br>
+        <label for="password">Correo</label>
+        <input type="text" name="correo" id="correo" placeholder="correo">
+        <br><br>
         <label for="password">Contraseña</label>
-        <input type="text" name="password" id="password" placeholder="contraseña">
+        <input type="password" name="password" id="password" placeholder="contraseña">
+        <br><br>
 
         <br><br>
 
