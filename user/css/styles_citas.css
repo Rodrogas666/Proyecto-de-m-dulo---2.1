@@ -57,6 +57,18 @@ body {
     cursor: pointer;
 }
 
+#bt1:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+#bt2:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
 #bt2{
     background-color: #F76313;
     color: white;
