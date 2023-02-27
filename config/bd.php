@@ -17,6 +17,7 @@ class BD {
         return self::$instancia;
     }
 }
+//s
 
 
 ?>
