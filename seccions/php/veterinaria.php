@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<p>sexo</p>
+<!--QUE RICO EL SEXO-->
     <div class="padretocho">
         <div class="padre">
             <div class="sub">
@@ -122,7 +122,7 @@
                         <h3>Oswaldo</h3>
                     </div>
                     <div class="texto-cards">
-                        <p>No c, pero tiene novia </p>
+                        <p>No sé, pero tiene novia </p>
                     </div>
                 </div>
             </div>
