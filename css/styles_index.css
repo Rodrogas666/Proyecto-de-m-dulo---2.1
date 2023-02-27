@@ -1,17 +1,23 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;900&family=Poppins:ital,wght@0,400;0,500;1,300&family=Ubuntu:ital,wght@0,400;0,500;1,700&display=swap');
+
+
+
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.padre{
+.padre {
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -22,7 +28,7 @@ body{
 
 }
 
-.sub{
+.sub {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -31,30 +37,30 @@ body{
     justify-content: center;
 }
 
-.imagen{
+.imagen {
     height: auto;
     max-width: 27rem;
     width: auto;
 }
 
-img{
+img {
     height: auto;
     width: auto;
 }
 
-.botones{
+.botones {
     display: flex;
     flex-direction: row;
     gap: 4.5rem;
 }
 
-.checkbox{
+.checkbox {
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
 }
 
-#uno{
+#uno {
     background-color: #F76313;
     color: white;
     border-color: transparent;
@@ -64,43 +70,44 @@ img{
     cursor: pointer;
 }
 
-#uno:hover{
+#uno:hover {
     background-color: white;
     border-color: black;
     color: black;
 }
 
-#telefono{
+#telefono {
     width: 30px;
     height: 25px;
-    
+    margin-top: 0.rem;
+
 }
 
-#dos{
+#dos {
     background-color: transparent;
-    color:black;
+    color: black;
     border-color: transparent;
     cursor: pointer;
 
 
 }
 
-.cositas{
+.cositas {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-#checkbox1{
+#checkbox1 {
     accent-color: #F76313;
-    
+
 }
 
-#checkbox2{
+#checkbox2 {
     accent-color: #F76313;
 }
 
-.padretocho{
+.padretocho {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +117,7 @@ img{
     gap: 4rem;
 }
 
-.padre2{
+.padre2 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -120,12 +127,12 @@ img{
     width: 100%;
 }
 
-.cartas{
+.cartas {
     display: flex;
     flex-direction: row;
 }
 
-.sub2{
+.sub2 {
     width: auto;
     gap: 2rem;
     display: flex;
@@ -134,7 +141,7 @@ img{
     text-align: center;
 }
 
-.cart{
+.cart {
     background-color: white;
     border-color: transparent;
     border-radius: 44px;
@@ -149,18 +156,18 @@ img{
     cursor: pointer;
 }
 
-.cart:hover{
+.cart:hover {
     background-color: #F76313;
     color: white;
 
 }
 
-.cartas{
+.cartas {
     gap: 2rem;
     margin-top: 2rem;
 }
 
-#img1{
+#img1 {
     height: 46px;
     width: 62px;
     display: flex;
@@ -169,22 +176,22 @@ img{
     text-align: center;
 }
 
-#img2{
+#img2 {
     height: 46px;
     width: 62px;
 }
 
-#img3{
+#img3 {
     height: 46px;
     width: 62px;
 }
 
-#img4{
+#img4 {
     height: 46px;
     width: 62px;
 }
 
-#tres{
+#tres {
     background-color: #F76313;
     color: white;
     border-color: transparent;
@@ -192,19 +199,20 @@ img{
     height: 3rem;
     width: 8rem;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
-#tres:hover{
+#tres:hover {
     background-color: white;
     border-color: black;
     color: black;
 }
 
-.boton2{
+.boton2 {
     margin-top: 2rem;
 }
 
-.padre3{
+.padre3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,14 +221,15 @@ img{
 
 }
 
-.sub3{
+.sub3 {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 2.5rem;
-    
+
 }
-.cards-img{
+
+.cards-img {
     display: flex;
     flex-direction: column;
     border-radius: 23px;
@@ -228,23 +237,23 @@ img{
     align-items: center;
     width: 50%;
     justify-content: center;
-    text-align: center;    
+    text-align: center;
     height: 20rem;
     overflow: hidden;
     width: 15rem;
     gap: 1.5rem;
 }
 
-#personas{
+#personas {
     height: 10rem;
     border-radius: 4rem;
     max-width: 12rem;
 }
 
-#boton3{
+#boton3 {
     background-color: #FF5B2E;
     max-width: 8rem;
-    border-radius:  1rem;
+    border-radius: 1rem;
     border-color: transparent;
     width: 120px;
     height: 60px;
@@ -252,14 +261,14 @@ img{
     cursor: pointer;
 }
 
-#boton3:hover{
+#boton3:hover {
     background-color: transparent;
     border-color: black;
     color: black;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.padre4{
+.padre4 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,7 +277,7 @@ img{
     width: 100%;
 }
 
-.sub4{
+.sub4 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -278,7 +287,7 @@ img{
 
 }
 
-.lado1{
+.lado1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -289,7 +298,7 @@ img{
 
 
 
-.lado2{
+.lado2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,7 +310,7 @@ img{
     gap: 3rem;
 }
 
-.lado2-0{
+.lado2-0 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,28 +320,28 @@ img{
     width: 13rem;
 }
 
-.texl1{
+.texl1 {
     display: flex;
     text-align: start;
 
 }
 
-.perrito-img{
+.perrito-img {
     display: flex;
     height: 17rem;
     width: 15rem;
-    background-color: aqua;
+    background-color: #FFE6D2;
     border-radius: 15px;
 }
 
-#perrito-img{
+#perrito-img {
     height: 15rem;
 }
 
-#boton4{
+#boton4 {
     background-color: #FF5B2E;
     max-width: 8rem;
-    border-radius:  1rem;
+    border-radius: 1rem;
     border-color: transparent;
     width: 120px;
     height: 60px;
@@ -340,7 +349,7 @@ img{
     cursor: pointer;
 }
 
-#boton4:hover{
+#boton4:hover {
     background-color: transparent;
     border-color: black;
     color: black;

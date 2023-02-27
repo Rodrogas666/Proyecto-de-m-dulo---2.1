@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/stilo.css">
-    <title>Veterinaria</title>
+    <link rel="stylesheet" href="../../css/styles_index.css">
+    <title>Home</title>
 </head>
 
 <body>
@@ -36,13 +36,13 @@
                 <div class="botones">
                     <button id="uno">Book a schedule</button>
                     <div class="cositas">
-                        <img src="../img/llamada-telefonica.png" alt="" id="telefono">
+                        <img src="../../src/img/llamada-telefonica.png" alt="" id="telefono">
                         <button id="dos">Emergency call</button>
                     </div>
                 </div>
             </div>
             <div class="imagen">
-                <img src="../img/pngwing 1.png" alt="">
+                <img src="../../src/img/pngwing 1.png" alt="">
             </div>
         </div>
 
@@ -59,22 +59,22 @@
             </div>
             <div class="cartas">
                 <div class="cart">
-                    <img src="../img/Screenshot_5-removebg-preview 1.png" alt="" id="img1">
-                    <h1>vaccination</h1>
+                    <img src="../../src/img/Screenshot_5-removebg-preview 1.png" alt="" id="img1">
+                    <h1>Vaccination</h1>
                     <p>perfect one you will like it. it´s our promise</p>
                 </div>
                 <div class="cart">
-                    <img src="../img/cat 1-4 1.png" alt="" id="img2">
+                    <img src="../../src/img/cat 1-4 1.png" alt="" id="img2">
                     <h1>Pet grooming</h1>
                     <p>perfect one you will like it its our promise</p>
                 </div>
                 <div class="cart">
-                    <img src="../img/Screenshot_6-removebg-preview 1.png" alt="" id="img3">
+                    <img src="../../src/img/Screenshot_6-removebg-preview 1.png" alt="" id="img3">
                     <h1>Veterinary</h1>
                     <p>perfect one you will like it its our promise</p>
                 </div>
                 <div class="cart">
-                    <img src="../img/Screenshot_7-removebg-preview 1.png" alt="" id="img4">
+                    <img src="../../src/img/Screenshot_7-removebg-preview 1.png" alt="" id="img4">
                     <h1>Cleaning</h1>
                     <p>perfect one you will like it its our promise</p>
                 </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="sub3">
                 <div class="cards-img">
-                    <img src="../img/cositas1.png" alt="" id="personas">
+                    <img src="../../src/img/cositas1.png" alt="" id="personas">
                     <div class="titulo-cards">
                         <h3>Leanstaring</h3>
                     </div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="cards-img">
-                    <img src="../img/cositas2.png" alt="" id="personas">
+                    <img src="../../src/img/cositas2.png" alt="" id="personas">
                     <div class="titulo-cards">
                         <h3>RodrogasAña</h3>
                     </div>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="cards-img">
-                    <img src="../img/cositas3.png" alt="" id="personas">
+                    <img src="../../src/img/cositas3.png" alt="" id="personas">
                     <div class="titulo-cards">
                         <h3>Ferchofloo</h3>
                     </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="cards-img">
-                    <img src="../img/cositas4.png" alt="" id="personas">
+                    <img src="../../src/img/cositas4.png" alt="" id="personas">
                     <div class="titulo-cards">
                         <h3>Oswaldo</h3>
                     </div>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="lado2">
                     <div class="perrito-img">
-                        <img src="../img/perro2.png" alt="" id="perrito-img">
+                        <img src="../../src/img/perro2.png" alt="" id="perrito-img">
                     </div>
                     <div class="lado2-0">
                         <div class="titulol2">
