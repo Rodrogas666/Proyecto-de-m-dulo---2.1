@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-02-2023 a las 19:58:55
+-- Tiempo de generación: 27-02-2023 a las 21:50:44
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -33,7 +33,6 @@ CREATE TABLE `citas` (
   `fecha` datetime NOT NULL,
   `estado` varchar(255) NOT NULL,
   `id_cliente` int NOT NULL,
-  `id_veterinario` int NOT NULL,
   `id_mascota` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -71,6 +70,13 @@ CREATE TABLE `clientemascotas` (
   `id_cliente` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Volcado de datos para la tabla `clientemascotas`
+--
+
+INSERT INTO `clientemascotas` (`id`, `id_mascota`, `id_cliente`) VALUES
+(1, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -93,9 +99,15 @@ CREATE TABLE `mascota` (
   `id` int NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `raza` varchar(255) NOT NULL,
-  `edad` int NOT NULL,
-  `id_cliente` int NOT NULL
+  `edad` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `mascota`
+--
+
+INSERT INTO `mascota` (`id`, `nombre`, `raza`, `edad`) VALUES
+(1, 'Aristides', 'Náhuat', 1000);
 
 -- --------------------------------------------------------
 
@@ -126,6 +138,18 @@ CREATE TABLE `veterinario` (
   `contrasenia` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `veterinariocitas`
+--
+
+CREATE TABLE `veterinariocitas` (
+  `id` int NOT NULL,
+  `id_veterinario` int NOT NULL,
+  `id_cita` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -136,7 +160,6 @@ CREATE TABLE `veterinario` (
 ALTER TABLE `citas`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_cliente` (`id_cliente`),
-  ADD KEY `id_veterinario` (`id_veterinario`),
   ADD KEY `id_mascota` (`id_mascota`);
 
 --
@@ -164,8 +187,7 @@ ALTER TABLE `emergencias`
 -- Indices de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_cliente` (`id_cliente`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `registro_medico`
@@ -181,6 +203,14 @@ ALTER TABLE `veterinario`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `veterinariocitas`
+--
+ALTER TABLE `veterinariocitas`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_veterinario` (`id_veterinario`),
+  ADD KEY `id_cita` (`id_cita`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -188,7 +218,7 @@ ALTER TABLE `veterinario`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -200,7 +230,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `clientemascotas`
 --
 ALTER TABLE `clientemascotas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `emergencias`
@@ -212,7 +242,7 @@ ALTER TABLE `emergencias`
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `registro_medico`
@@ -227,6 +257,12 @@ ALTER TABLE `veterinario`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `veterinariocitas`
+--
+ALTER TABLE `veterinariocitas`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -234,7 +270,6 @@ ALTER TABLE `veterinario`
 -- Filtros para la tabla `citas`
 --
 ALTER TABLE `citas`
-  ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`id_veterinario`) REFERENCES `veterinario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `citas_ibfk_4` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -256,6 +291,13 @@ ALTER TABLE `emergencias`
 --
 ALTER TABLE `registro_medico`
   ADD CONSTRAINT `registro_medico_ibfk_1` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `veterinariocitas`
+--
+ALTER TABLE `veterinariocitas`
+  ADD CONSTRAINT `veterinariocitas_ibfk_1` FOREIGN KEY (`id_veterinario`) REFERENCES `veterinario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `veterinariocitas_ibfk_2` FOREIGN KEY (`id_cita`) REFERENCES `citas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

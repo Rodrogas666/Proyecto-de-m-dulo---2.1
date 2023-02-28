@@ -3,7 +3,9 @@
 session_start();
 include_once '../../../config/bd.php';
 //Hace la conexión a la base de datos
+
 $conexionBD = BD::crearInstancia();
+
 
 // print_r($_POST);
 

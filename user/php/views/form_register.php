@@ -3,33 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Login/Sing up</title>
+    <link rel="stylesheet" href="../../css/styles_register_login.css">
+
 </head>
 
 <body>
-    REGISTER
-    <br><br>
-    <form action="../session/register.php" method="post">
+    <div class="for-box">
+        <div class="cuadrotexto">
+            <h1>Welcome</h1>
+            <p>Welcome, Please enter your details</p>
+            <br>
+            <form action="../session/register.php" method="post">
+            <p><b>Name</b></p>
+            <input type="text" id="input" placeholder="   Enter your name" required name="nombre">
+            <br>
+            <br>
+            <p><b>Last name</b></p>
+            <input type="text" id="input" placeholder="   Enter your last names" required name="apellido">
+            <br>
+            <br>
+            <p><b>Email</b></p>
+            <input type="email" name="correo" id="input" placeholder="   Enter your email" required>
+            <br>
+            <br>
+            <p><b>Password</b></p>
+            <input type="password" name="password" id="input" placeholder="  Enter your password" >
+            <br>
+            <br>
+            <input type="checkbox" name="" id=""><p id="uwu"><b>Remenber 30 days</b></p>
+            <input type="submit" value="Sign in" id="boton1">
+            <br>
+            <input type="submit" value="Sign in with Google" id="boton">
+</form>
+            
+        </div>
+        <img src="../../src/img/images.jpg" alt="" id="img">
+    </div>
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="nombre">
-        <br><br>
-        <label for="password">Apellido</label>
-        <input type="text" name="apellido" id="apellido" placeholder="apellido">
-        <br><br>
-        <label for="password">Correo</label>
-        <input type="text" name="correo" id="correo" placeholder="correo">
-        <br><br>
-        <label for="password">Contraseña</label>
-        <input type="password" name="password" id="password" placeholder="contraseña">
-        <br><br>
 
-        <br><br>
 
-        <button type="submit">Register</button>
-    </form>
 
 </body>
 
