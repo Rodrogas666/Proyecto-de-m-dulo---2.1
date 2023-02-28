@@ -24,11 +24,11 @@ if ($_POST) {
 
 
     if ($usuario) {
-        $_SESSION['usuario'] = $usuario['nombre'];
+        $_SESSION['usuario'] = $usuario['id'];
         header('Location:../views/home.php');
 
     } else if ($veterinario) {
-        $_SESSION['veterinario'] = $veterinario['nombre'];
+        $_SESSION['veterinario'] = $veterinario['id'];
         header('Location:../views/home.php');
 
     } else {
