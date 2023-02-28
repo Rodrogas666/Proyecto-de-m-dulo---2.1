@@ -65,3 +65,14 @@
 .container-form .btn-enviar:hover{
     background: #e39403;
 }
+
+.for{
+    display: flex;
+    padding-top: 5.5rem;
+}
+
+#wenamechi{
+    height: 15rem;
+    width: 30rem;
+    border-radius: 1rem;
+}
