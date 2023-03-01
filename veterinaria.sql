@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-02-2023 a las 21:50:44
+-- Tiempo de generación: 01-03-2023 a las 08:01:57
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -29,12 +29,30 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citas` (
   `id` int NOT NULL,
-  `asunto` text NOT NULL,
+  `asunto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `mensaje` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `fecha` datetime NOT NULL,
   `estado` varchar(255) NOT NULL,
   `id_cliente` int NOT NULL,
   `id_mascota` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id`, `asunto`, `mensaje`, `fecha`, `estado`, `id_cliente`, `id_mascota`) VALUES
+(10, 'Fractura de pata', 'Mi perro se lastimó la pata jugando con una pelota, tiene una fractura y no se puede sostener con esa pata. Por tal razón agendo esta cita.', '2023-03-01 03:30:00', 'not taken', 1, 3),
+(11, 'A mi perro le cuesta respirar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ', '2023-03-12 14:00:00', 'Not taken', 1, 3),
+(12, 'fasdfdsafasdfsadfasfas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-01-31 03:21:00', 'Not taken', 1, 3),
+(17, 'fasdfdsafasdfsadfasfas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-01-31 03:21:00', 'Not taken', 1, 3),
+(18, 'fasdfdsafasdfsadfasfas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-01-31 03:21:00', 'Not taken', 1, 3),
+(19, 'si   ', 'rodrigo', '2023-02-27 21:57:00', 'Not taken', 1, 3),
+(20, 'Mi perro no come', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-03-02 11:30:00', 'Not taken', 2, 2),
+(21, 'wazados', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2024-01-31 03:21:00', 'Not taken', 2, 1),
+(23, 'Mi gato no come', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-11-11 11:11:00', 'Not taken', 2, 1),
+(28, 'ajam', '', '2023-05-23 10:00:00', 'Not taken', 2, 1),
+(29, 'prueba con gerardo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2023-02-12 03:21:00', 'Not taken', 1, 16);
 
 -- --------------------------------------------------------
 
@@ -75,19 +93,11 @@ CREATE TABLE `clientemascotas` (
 --
 
 INSERT INTO `clientemascotas` (`id`, `id_mascota`, `id_cliente`) VALUES
-(1, 1, 2);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `emergencias`
---
-
-CREATE TABLE `emergencias` (
-  `id` int NOT NULL,
-  `hora` datetime NOT NULL,
-  `id_cliente` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+(1, 1, 2),
+(2, 3, 1),
+(3, 2, 2),
+(10, 16, 1),
+(11, 17, 2);
 
 -- --------------------------------------------------------
 
@@ -107,7 +117,11 @@ CREATE TABLE `mascota` (
 --
 
 INSERT INTO `mascota` (`id`, `nombre`, `raza`, `edad`) VALUES
-(1, 'Aristides', 'Náhuat', 1000);
+(1, 'Aristides', 'Náhuat', 1000),
+(2, 'canelon', 'aguacatero', 3),
+(3, 'fernandoflo', 'si', 2),
+(16, 'Gerardo', 'Huskey', 2),
+(17, 'Juca', 'Hush puppie', 3);
 
 -- --------------------------------------------------------
 
@@ -177,13 +191,6 @@ ALTER TABLE `clientemascotas`
   ADD KEY `id_cliente` (`id_cliente`);
 
 --
--- Indices de la tabla `emergencias`
---
-ALTER TABLE `emergencias`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_cliente` (`id_cliente`);
-
---
 -- Indices de la tabla `mascota`
 --
 ALTER TABLE `mascota`
@@ -218,7 +225,7 @@ ALTER TABLE `veterinariocitas`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -230,19 +237,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `clientemascotas`
 --
 ALTER TABLE `clientemascotas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `emergencias`
---
-ALTER TABLE `emergencias`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `registro_medico`
@@ -279,12 +280,6 @@ ALTER TABLE `citas`
 ALTER TABLE `clientemascotas`
   ADD CONSTRAINT `clientemascotas_ibfk_1` FOREIGN KEY (`id_mascota`) REFERENCES `mascota` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `clientemascotas_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `emergencias`
---
-ALTER TABLE `emergencias`
-  ADD CONSTRAINT `emergencias_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `registro_medico`
