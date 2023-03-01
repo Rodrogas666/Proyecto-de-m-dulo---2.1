@@ -6,7 +6,8 @@ include('../citas.php');
 
 ?>
 
-
+<!-- Aquí antes estaba esto: form_agregar_cita.php
+lo cambie para que redireccione-->
 <form action="form_agregar_cita.php" method="post">
 
     <!-- <label for="">Tipo</label>

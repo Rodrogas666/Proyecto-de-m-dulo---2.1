@@ -23,7 +23,12 @@ include_once('../templates/header.php');
     </tr>
     <?php }?>
 </table>
+<br><br>
+<a name="" id="" class="btn btn-primary" href="form_agregar_mascota.php" role="button">Añadir mascota?</a>
 
-</body>
-</html>
+
+<?php
+include_once('../templates/footer.php');
+
+?>
 

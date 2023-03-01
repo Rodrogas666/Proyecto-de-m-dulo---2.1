@@ -47,7 +47,9 @@ if ($accion != '') {
             $consulta->bindParam(':id_mascota', $mascota);
             $consulta->execute();
 
-            print_r($sql);
+            header("Location: vista_citas.php");
+
+            // print_r($sql);
 
 
             break;
@@ -125,12 +127,20 @@ $sql1 = "SELECT * FROM `clientemascotas` INNER JOIN mascota ON clientemascotas.i
 $listaClienteMascotas = $conexionBD->query($sql1);
 $clientemascotas = $listaClienteMascotas->fetchAll();
 
-$sql2 = "SELECT * FROM `citas` WHERE id_cliente = $id_cliente";
+// print_r($clientemascotas);
+
+// $sql2 = "SELECT * FROM `citas` WHERE id_cliente = $id_cliente";
+// $consulta = $conexionBD->prepare($sql2);
+// $consulta->execute();
+// $clienteCitas = $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+// print_r($clienteCitas);
+//SELECT * FROM `clientemascotas` INNER JOIN citas ON clientemascotas.id_mascota = citas.id_mascota WHERE citas.id_cliente = 1
+
+$sql2 = "SELECT * FROM `clientemascotas` INNER JOIN citas ON clientemascotas.id_mascota = citas.id_mascota INNER JOIN mascota ON mascota.id = citas.id_mascota WHERE citas.id_cliente = $id_cliente";
 $consulta = $conexionBD->prepare($sql2);
 $consulta->execute();
 $clienteCitas = $consulta->fetchAll(PDO::FETCH_ASSOC);
-
-print_r($clienteCitas);
 
 
 // print_r($clientemascotas);

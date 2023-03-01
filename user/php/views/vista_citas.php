@@ -15,11 +15,11 @@ include('../citas.php');
         <div class="citas">
             <?php foreach ($clienteCitas as $cita) { ?>
                 <div>
-                <p>Cita común</p>
                 <p><?php echo $cita['estado'] ?></p>
                 <p><?php echo $cita['asunto'] ?></p>
                 <p><?php echo $cita['mensaje'] ?></p>
                 <p><?php echo $cita['fecha'] ?></p>
+                <p><?php echo $cita['nombre'] ?></p>
                 <br>
                 <br>
             </div>
