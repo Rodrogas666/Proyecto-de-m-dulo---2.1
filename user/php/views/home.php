@@ -88,7 +88,7 @@ include('../templates/header.php');
                     <h3>Leanstaring</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Pro del valorantin</p>
+                    <p>Pro del valorantin y Aleman</p>
                 </div>
             </div>
             <div class="cards-img">
@@ -97,7 +97,7 @@ include('../templates/header.php');
                     <h3>RodrogasAña</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Pro del anepretérito subjuntivo conpuesto</p>
+                    <p>Pro del antepretérito subjuntivo conpuesto</p>
                 </div>
             </div>
             <div class="cards-img">
