@@ -47,7 +47,7 @@
                               <option value="" id="mascotas-op">a</option>
                               <option value="" id="mascotas-op">a</option>
                             </select>
-                            <button id="btn-p">sexo</button>
+                            <button id="btn-p">Enviar</button>
                         </form>
                       </div>
                     </div>
