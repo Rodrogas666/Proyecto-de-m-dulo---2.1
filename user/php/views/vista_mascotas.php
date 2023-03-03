@@ -1,7 +1,8 @@
 <?php 
 
-include_once('../mascotas.php');
 include_once('../templates/header.php');
+include_once('../mascotas.php');
+
 
 ?>
 

@@ -29,7 +29,7 @@ if ($_POST) {
 
     } else if ($veterinario) {
         $_SESSION['veterinario'] = $veterinario['id'];
-        header('Location:../views/home.php');
+        header('Location:../../../veterinario/php/dashboard.php');
 
     } else {
         echo "Usuario o contraseña incorrectos >(";
