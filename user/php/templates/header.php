@@ -14,29 +14,45 @@
 
 <header>
     <nav>
-        <div>
-
+        <div class="hader">
+            <div class="logo">
+                <img src="../templates/img/Mew.png" alt="" id="img-h">
+            </div>
             <?php
 
             session_start();
 
             if (isset($_SESSION['usuario'])) { ?>
+                <div class="info-h">
                 <a href="../views/home.php">Home</a>
                 <a href="#">Sobre nosotros</a>
                 <a href="../views/vista_citas.php">Citas</a>
                 <a href="../views/vista_mascotas.php">Mascotas</a>
+                </div>
+                <div class="boton-h">
                 <a href="../session/cerrar_sesion.php">Cerrar sesión</a>
+                </div>
             <?php }
             else if (isset($_SESSION['veterinario'])) { ?>
+                <div class="info-h">
                 <a href="../../veterinario/php/dashboard.php">Todas las citas</a>
                 <a href="../../veterinario/php/dashboard_citas_accepted.php">Citas aceptadas</a>
+                </div>
+                <div class="boton-h">
                 <a href="../../user/php/session/cerrar_sesion.php">Cerrar sesión</a>
+                </div>
             <?php } 
             else if (!isset($_SESSION['usuario']) || !isset($_SESSION['veterinario'])) {  ?>
+                <div class="info-h">
                 <a href="../views/home.php">Home</a>
                 <a href="#">Sobre nosotros</a>
+                </div>
+                <div class="boton-h">
                 <a href="../views/form_login.php">Iniciar sesión</a>
+                <div class="boton-h2">
                 <a href="../views/form_register.php">Registrarse</a>
+                </div>
+                </div>
             <?php } ?>
 
             
