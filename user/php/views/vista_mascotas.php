@@ -7,7 +7,8 @@ include_once('../mascotas.php');
 ?>
 
 
-
+<a href="../views/registro_medico_vista.php"><button class="btn-send">Ver registro médico</button>
+</a>
 <table>
     <tr>
         <th>Número</th>

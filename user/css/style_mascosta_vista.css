@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Rubik:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60rem;
+    
+}
+
+.sub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.cartas{
+    background-color: rgb(255, 255, 255);
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 23px;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    margin: 25px auto;
+    border: 1px solid rgb(238, 237, 237);
+    box-shadow: 7px 7px  7px#dfdbdb;  
+}
+
+#perro{
+    width: 100px;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    width: 6rem;
+    height: 40px;
+    cursor: pointer;
+   transition: 0.5s;
+}
+
+#b1{
+    background-color: #3960F3 ;
+    color: #ffffff;
+}
+
+#b2{
+    background-color:#D51A0D;
+    color: #ffffff;
+}
+
+
+.texto{           
+    text-align: start;
+    margin-right: 220px;
+}
+
+p{
+    margin: 9px;
+    font-size: 18px;
+}
+
+h3{
+    margin-right: 120px;
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    width: 9rem;
+    height: 40px;
+    background-color: #508F2B ;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input:hover{
+    background-color: #ffffff;
+  color: #508F2B ;
+  border: solid 2px #508F2B;
+}
+
+
+#b1:hover{
+  background-color: #ffffff;
+  color: #3960F3 ;
+  border: solid 2px #3960F3;
+}
+
+#b2:hover{
+    background-color: #ffffff;
+    color:  #D51A0D ;
+    border: solid 2px #D51A0D;
+  }

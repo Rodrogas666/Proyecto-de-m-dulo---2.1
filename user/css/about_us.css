@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kalam', cursive;
+}
+
+#f1{
+    border: none;
+    width: 700px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+#f2{
+    border: none;
+    width: 700px;
+    font-size: 15px;
+    margin-left: 645px;
+    margin-top: -90px;
+    color: rgb(96, 99, 98);
+}
+
+#f3{
+    border: none;
+    width: 500px;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#f4{
+    border: none;
+    width: 550px;
+    margin-left: 40px;
+    margin-top: -107px;
+    margin-left: 700px;
+    font-size: 18px; 
+}
+
+#f5{
+    border: none;
+    width: 550px;
+    margin-left: 40px;
+    margin-top: 35px;
+    margin-left: 700px;
+    font-size: 18px;
+    color: rgb(96, 99, 98);
+}
+
+#f6{
+    border: none;
+    width: 550px;
+    margin-left: 40px;
+    margin-top: 35px;
+    margin-left: 700px;
+    font-size: 25px;
+}
+
+#f7{
+    border: none;
+    width: 300px;
+    margin-left: 150px;
+    margin-top: -200px;
+    
+}
+
+#git{
+    font-size: 45px;
+}
+
+#foto{
+    margin-top: 80px;
+    margin-left: 17rem;
+    width: 800px;
+    
+}
+
+#ji{
+    width: 1300px;
+    height: 1px;
+    margin-top: 225px;
+    background-color: rgb(109, 108, 108);
+    border: none;
+}
+
+hr{
+    width: 1300px;
+    height: 1px;
+    margin-top: 25px;
+    background-color: rgb(109, 108, 108);
+}
+
+#sal{
+    width: 1300px;
+    height: 1px;
+    margin-top: 25px;
+    background-color: rgb(109, 108, 108);
+    border: none;
+}
+
+#olo{
+    width: 1349px;
+    height: 9px;
+    margin-top: 25px;
+    background-color: #E76313;
+    border: 1px;
+    border: none;
+}
+
+#a1{
+    width: 200px;
+    border: none;
+    margin-left: 150px;
+}
+
+#a2{
+    width: 200px;
+    border: none;
+    margin-left: 450px;
+    margin-top: -130px;
+}
+
+#a3{
+    width: 200px;
+    border: none;
+    margin-left: 750px;
+    margin-top: -130px;
+}
+
+#a4{
+    width: 200px;
+    border: none;
+    margin-left: 1050px;
+    margin-top: -130px;
+}
+
+#g1{
+    border: none;
+    width: 550px;
+    margin-left: 40px;
+    margin-top: -107px;
+    margin-left: 700px;
+    font-size: 18px;
+    color:  rgb(107, 110, 109) ;
+}
+
+.d1{
+    color: rgb(107, 110, 109) ;
+    border: none;
+}
+
+HR{
+    border: none;
+}
+
+
