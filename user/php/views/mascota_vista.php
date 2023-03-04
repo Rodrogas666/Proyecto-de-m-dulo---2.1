@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style_mascosta_vista.css">
-    <title>Document</title>
-</head>
-<body>
+
 <?php
 include('../templates/header.php');
+include('../mascotas.php');
 
 ?>
+<link rel="stylesheet" href="../../css/style_mascosta_vista.css">
     <div class="Father">
         <br>
         <div class="titulo">
@@ -19,14 +12,15 @@ include('../templates/header.php');
             <b><input type="submit" value="Agregar mascotas"></b>
         </div>
         <div class="sub">
-            <div class="cartas">
-                <H3>Nombre de mascota</H3>
+        <?php foreach($listaMascotas as $mascota){ ?>
+            <div class="cards">
+                <H3><?php echo $mascota['nombre']?></H3>
                 <img src="../../src/img/Perrito.jpg" alt="" id="perro">
                 <div class="texto">
                 <p><b>Detalles</b></p>
-                <p>Especie:</p>
-                <p>Raza:</p>
-                <p>Genero:</p>
+                <p>Especie: <?php echo $mascota['especie']?></p>
+                <p>Raza: <?php echo $mascota['raza']?></p>
+                <p>Genero: <?php echo $mascota['genero']?></p>
                 </div>  
                 <br>
                 <div class="botones">
@@ -34,36 +28,7 @@ include('../templates/header.php');
                     <button id="b2"><b>Eliminar</b></button>
                 </div>
             </div>
-            <div class="cartas">
-                <H3>Nombre de mascota</H3>
-                <img src="../../src/img/Perrito.jpg" alt="" id="perro">
-                <div class="texto">
-                <p><b>Detalles</b></p>
-                <p>Especie:</p>
-                <p>Raza:</p>
-                <p>Genero:</p>
-                </div>  
-                <br>
-                <div class="botones">
-                    <button id="b1"><b>Editar</b></button>
-                    <button id="b2"><b>Eliminar</b></button>
-                </div>
-            </div>
-            <div class="cartas">
-                <H3>Nombre de mascota</H3>
-                <img src="../../src/img/Perrito.jpg" alt="" id="perro">
-                <div class="texto">
-                <p><b>Detalles</b></p>
-                <p>Especie:</p>
-                <p>Raza:</p>
-                <p>Genero:</p>
-                </div>  
-                <br>
-                <div class="botones">
-                <button id="b1"><b>Editar</b></button>
-                <button id="b2"><b>Eliminar</b></button>
-                </div>
-            </div>
+        <?php }?>
         </div>
     </div>
 <?php

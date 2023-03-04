@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60rem;
+    gap: 80rem;
     
 }
 
@@ -23,10 +23,10 @@
     margin-right: 6rem;
 }
 
-.cartas{
+.cards{
     background-color: rgb(255, 255, 255);
     width: 20rem;
-    height: 25rem;
+    height: 27rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -73,7 +73,8 @@ button{
 
 .texto{           
     text-align: start;
-    margin-right: 220px;
+    /* margin-right: 190px; */
+    width: 85%;
 }
 
 p{
@@ -82,7 +83,10 @@ p{
 }
 
 h3{
-    margin-right: 120px;
+    width: 80%;
+    text-align: start;
+    /* margin-right: 80px; */
+    margin-bottom: 10px;
 }
 
 input{

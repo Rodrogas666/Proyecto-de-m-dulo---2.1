@@ -37,10 +37,9 @@ $accion = isset($_POST['accion']) ? $_POST['accion'] : '';
 if ($accion != '') {
     switch ($accion) {
         case 'agregar':
-            $sql = "INSERT INTO citas (id_cita, asunto, mensaje, fecha, estado, id_cliente, id_mascota) VALUES (NULL, :asunto, :mensaje, :fecha, :estado, :id_cliente, :id_mascota)";
+            $sql = "INSERT INTO citas (id_cita, asunto, fecha, estado, id_cliente, id_mascota) VALUES (NULL, :asunto, :fecha, :estado, :id_cliente, :id_mascota)";
             $consulta = $conexionBD->prepare($sql);
             $consulta->bindParam(':asunto', $asunto);
-            $consulta->bindParam(':mensaje', $mensaje);
             $consulta->bindParam(':fecha', $fecha_hora);
             $consulta->bindParam(':estado', $estado);
             $consulta->bindParam(':id_cliente', $id_cliente);

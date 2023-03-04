@@ -31,8 +31,8 @@
                 <div class="info-h">
                 <a href="../views/home.php">Home</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
-                <a href="../views/vista_citas.php">Citas</a>
-                <a href="../views/vista_mascotas.php">Mascotas</a>
+                <a href="../views/vista_citas_usuario.php">Citas</a>
+                <a href="../views/mascota_vista.php">Mascotas</a>
                 </div>
                 <div class="boton-h">
                 <a href="../session/cerrar_sesion.php">Cerrar sesión</a>
