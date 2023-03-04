@@ -28,7 +28,7 @@ include('../citas.php');
                         </svg>
                       </div>
                       <div class="details-modal-title">
-                        <h1>My details modal</h1>
+                        <h1>Agrega una cita</h1>
                       </div>
                       <div class="details-modal-content">
                         <form action="vista_citas_usuario.php" method="post" class="form-popup">
