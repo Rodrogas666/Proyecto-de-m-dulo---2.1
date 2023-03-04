@@ -5,7 +5,7 @@ include('../citas.php');
 
 ?>
     <link rel="stylesheet" href="../../css/styles_citas.css">
-    <div class="padre">
+    <div class="padre-citas">
         <div class="agregar-cita">
             <div class="text1">
                 <h1>Mis citas</h1>
@@ -52,15 +52,15 @@ include('../citas.php');
             </div>
         </div>
         <div class="tabla">
-            <div class="titulos">
+            
                 <h4>Status</h4>
                 <h4>Asunto</h4>
                 <h4>Fecha/Tiempo</h4>
                 <h4>Mascota</h4>
                 <h4>eliminar</h4>
-            </div>
+            
             <?php foreach ($clienteCitas as $cita) { ?>
-            <div class="celda">
+            
                 <p><?php echo $cita['estado'] ?></p>
                 <p><?php echo $cita['asunto'] ?></p>
                 <p><?php echo $cita['fecha'] ?></p>
@@ -70,7 +70,7 @@ include('../citas.php');
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
                     </svg>
                 </button>
-            </div>
+            
             <?php } ?>
         </div>
     </div>
