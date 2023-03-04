@@ -1,5 +1,6 @@
 <?php
 include('../templates/header.php');
+include('../mascotas.php');
 
 ?>  
 <link rel="stylesheet" href="../../css/agregar_mascotas.css">
@@ -11,14 +12,17 @@ include('../templates/header.php');
             <img src="../../src/img/f1280x720-966888_1098563_7846.jpg" alt="" id="wenamechi">
         </div>
         <div class="for">
-            <form action="#">
+            <form action="form_add_mascota.php" method="post">
                 <input type="text" name="nombre" placeholder="El nombre" class="campo">
-                <input type="number" name="email" placeholder="La edad" class="campo">
+                <input type="number" name="edad" placeholder="La edad" class="campo">
+                <input type="text" name="especie" placeholder="La especie" class="campo">
                 <input type="text" name="raza" placeholder="La raza" class="campo">
-                <input type="submit" name="enviar" value="Enviar" class="btn-enviar">
+                <input type="text" name="genero" placeholder="El género" class="campo">
+                <button type="submit" name="accion" value="agregar" class="btn-enviar">Agregar mascota</button>
             </form>
         </div>
     </div>
+    
 <?php
 include('../templates/footer.php');
 
