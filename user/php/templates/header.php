@@ -40,9 +40,11 @@
             <?php }
             else if (isset($_SESSION['veterinario'])) { ?>
                 <div class="info-h">
-                <a href="../../veterinario/php/dashboard.php">Todas las citas</a>
+                <a href="../../veterinario/php/dashboard.php">Citas pendientes</a>
                 <a href="../../veterinario/php/dashboard_citas_accepted.php">Citas aceptadas</a>
-                </div>
+                <a href="../../veterinario/php/view_ended_citas.php">Citas Finalizadas</a>
+                <a href="../../veterinario/php/view_mascotas.php">Registro medico</a>    
+            </div>
                 <div class="boton-h">
                 <a href="../../user/php/session/cerrar_sesion.php">Cerrar sesión</a>
                 </div>

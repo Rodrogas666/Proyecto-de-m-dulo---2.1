@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
     <footer>
         <div class="papu-m">

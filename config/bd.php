@@ -11,8 +11,11 @@ class BD {
             //Define una opción para PDO que establece el modo de error en "excepción", lo que significa que PDO lanzará excepciones en caso de errores en lugar de simplemente mostrar un mensaje de advertencia.
             $opciones[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
             //Crea una nueva instancia de la clase PDO para conectarse a una base de datos MySQL
-            self::$instancia = new PDO('mysql:host=localhost;dbname=veterinaria', 'root', '', $opciones);
-            echo "conectado";
+            
+            //!Saz: Cambie la contraseña de root por como tengo configurado el mysql xd 
+
+            self::$instancia = new PDO('mysql:host=localhost;dbname=veterinaria', 'root', 'root', $opciones);
+            // echo "conectado";
         }
         return self::$instancia;
     }

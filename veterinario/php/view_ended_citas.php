@@ -1,7 +1,7 @@
 <?php
 
 include_once('../../user/php/templates/header.php');
-include_once('recibir_citas.php');
+include_once('./_data_endedCitas.php');
 
 ?>
 <link rel="stylesheet" href="../../user/css/styles_index.css">
@@ -20,6 +20,9 @@ include_once('recibir_citas.php');
         padding: 1rem;
         margin: 1rem;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .main {
@@ -34,19 +37,13 @@ include_once('recibir_citas.php');
     <br>
     <br>
     <div class="contenedor_citas">
-        <?php foreach ($clienteCitas as $cita) { ?>
-            <form class="citas" action="dashboard.php" method="post">
-                <p><?php echo $cita['estado'] ?></p>
-                <p><?php echo $cita['asunto'] ?></p>
-                <p><?php echo $cita['fecha'] ?></p>
-                <p><?php echo $cita['nombre'] ?></p>
-
-                <input type="hidden" name="id" value="<?php echo $cita['id_cita'] ?>">
-                <button type="submit" name="accion" value="agregar">Agregar cita</button>
-                <br>
-                <br>
-                <br>
-            </form>
+        <?php foreach ($vetCitas as $cita) { ?>
+            <div class="citas">
+                <p> <span style="font-weight:bold;">Estado:</span> <?php echo $cita['estado'] ?></p>
+                <p> <span style="font-weight:bold;">Asunto:</span> <?php echo $cita['asunto'] ?></p>
+                <p> <span style="font-weight:bold;">Fecha:</span> <?php echo $cita['fecha'] ?></p>
+                <p> <span style="font-weight:bold;">Mascota:</span> <?php echo $cita['nombre'] ?></p>
+            </div>
         <?php } ?>
     </div>
 </div>
