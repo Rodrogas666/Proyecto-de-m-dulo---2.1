@@ -8,6 +8,10 @@
     <title>Index</title>
 </head>
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <Fieldset id="f1">
         <p id="git" ><b id="git">We build bridges between</b> <span class="d1">companies and coustomers</span></p>
     </Fieldset>
@@ -65,5 +69,9 @@
 
     <br>
     <hr id="olo">
+<?php
+include('../templates/footer.php');
+
+?>
 </body>
 </html>

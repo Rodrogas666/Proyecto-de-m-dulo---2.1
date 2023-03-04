@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 ?>
 
 
@@ -14,6 +14,10 @@ session_start();
 </head>
 
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <div class="form-box">
         <div class="container">
             <h1>Welcome back</h1>
@@ -41,7 +45,10 @@ session_start();
 
 
 
+<?php
+include('../templates/footer.php');
 
+?>
 </body>
 
 </html>

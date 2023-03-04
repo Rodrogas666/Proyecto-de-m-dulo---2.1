@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <div class="container-form">
         <div class="info-form">
             <h2>Registra a tu mascota</h2>
@@ -24,5 +28,9 @@
             </form>
         </div>
     </div>
+<?php
+include('../templates/footer.php');
+
+?>
 </body>
 </html>

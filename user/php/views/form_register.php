@@ -9,6 +9,10 @@
 </head>
 
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <div class="for-box">
         <div class="cuadrotexto">
             <h1>Welcome</h1>
@@ -43,7 +47,10 @@
 
 
 
+<?php
+include('../templates/footer.php');
 
+?>
 </body>
 
 </html>

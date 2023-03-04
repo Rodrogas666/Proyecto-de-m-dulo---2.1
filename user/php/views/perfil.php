@@ -10,22 +10,13 @@
 </head>
 
 <body>
-    <!--======================================
-=            Apock web design            =
-=======================================
-Gracias por utilizar mi contenido!
-Me siento agradecido compartiendo para Uds
-No olvides seguirme en:
-👉 Instagram - https://www.instagram.com/ApockGraficos
-👉 Twitter - https://twitter.com/ApockGraficos
-👉 Faccobook - https://www.facebook.com/ApockGraficos
-====-->
 
+<?php
+include('../templates/header.php');
+
+?>
 <style type="text/css">
-/*=====================================
-reset estilos
-no es necesario que copies esto
-=====================================*/
+
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -48,10 +39,7 @@ body {
     font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
 }
 
-/*=====================================
-estilos de la utilidad
-Copiar esto
-=====================================*/
+
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
     display: flex;
@@ -75,12 +63,7 @@ Copiar esto
     height: 17rem;
     background-image: linear-gradient(45deg, #BC3CFF, #317FFF);
     border-radius: 0 0 20px 20px;
-    /*
-    background-image: url('http://localhost/multimedia/png/user-portada-3.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    */
+   
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
@@ -251,9 +234,7 @@ Copiar esto
     }
 }
 </style>
-    <!--==========================
-=            html            =
-===========================-->
+
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
@@ -295,12 +276,7 @@ Copiar esto
             </div>
         </div>
     </section>
-    <!--====  End of html  ====-->
 
-<!--=============================
-redes sociales fijadas en pantalla
-No es necesario que copies esto!
-==============================-->
 <style>
 .mensaje a {
     color: inherit;
@@ -312,16 +288,11 @@ No es necesario que copies esto!
     transform: scale(1.4)
 }
 </style>
-<div class="mis-redes" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5; z-index: 1000;">
-    <p style="font-size: .75rem;">Apock graficos</p>
-    <div>
-        <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i class="fab fa-facebook-square"></i></a>
-        <a target="_blank" href="https://twitter.com/ApockGraficos"><i class="fab fa-twitter"></i></a>
-        <a target="_blank" href="https://www.instagram.com/ApockGraficos"><i class="fab fa-instagram"></i></a>
-        <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i class="fab fa-youtube"></i></a>
-    </div>
-</div>
-<!--====  End of tarjeta  ====-->
+
+<?php
+include('../templates/footer.php');
+
+?>
 </body>
 
 </html>

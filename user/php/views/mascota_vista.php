@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <div class="Father">
         <br>
         <div class="titulo">
@@ -62,5 +66,9 @@
             </div>
         </div>
     </div>
+<?php
+include('../templates/footer.php');
+
+?>
 </body>
 </html>

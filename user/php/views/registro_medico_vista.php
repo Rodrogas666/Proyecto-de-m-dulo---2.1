@@ -7,6 +7,10 @@
     <title>Vista registro médico</title>
 </head>
 <body>
+<?php
+include('../templates/header.php');
+
+?>
     <table>
         <tr>
             <td></td>
@@ -24,5 +28,9 @@
             <td></td>
         </tr>
     </table>
+<?php
+include('../templates/footer.php');
+
+?>    
 </body>
 </html>

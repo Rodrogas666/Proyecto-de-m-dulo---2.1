@@ -85,28 +85,28 @@ include('../templates/header.php');
             <div class="cards-img">
                 <img src="../../src/img/cositas1.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Leanstaring</h3>
+                    <h3>Leandro</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Pro del valorantin y Aleman</p>
+                    <p>backend developer</p>
                 </div>
             </div>
             <div class="cards-img">
                 <img src="../../src/img/cositas2.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>RodrogasAña</h3>
+                    <h3>Rodrigo</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Pro del antepretérito subjuntivo conpuesto</p>
+                    <p>backend developer</p>
                 </div>
             </div>
             <div class="cards-img">
                 <img src="../../src/img/cositas3.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Ferchofloo</h3>
+                    <h3>Fernando</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Le sabe al Apex Legends</p>
+                    <p>Fronent developer</p>
                 </div>
             </div>
             <div class="cards-img">
@@ -115,7 +115,7 @@ include('../templates/header.php');
                     <h3>Oswaldo</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>No sé, pero tiene novia </p>
+                    <p>Fronent developer</p>
                 </div>
             </div>
         </div>
