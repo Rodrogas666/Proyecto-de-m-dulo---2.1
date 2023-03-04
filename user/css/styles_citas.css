@@ -16,6 +16,7 @@ body {
 }
 
 .padre{
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,6 +25,7 @@ body {
 }
 
 .agregar-cita{
+    margin-top: 2rem;
     display:flex ;
     align-items: center;
     flex-direction: row;

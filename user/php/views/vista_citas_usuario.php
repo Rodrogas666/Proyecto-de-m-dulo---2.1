@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles_citas.css">
-    <title>Document</title>
-</head>
-
-<body>
 <?php
 include('../templates/header.php');
+include('../citas.php');
 
 ?>
+    <link rel="stylesheet" href="../../css/styles_citas.css">
     <div class="padre">
         <div class="agregar-cita">
             <div class="text1">
@@ -40,18 +31,20 @@ include('../templates/header.php');
                         <h1>My details modal</h1>
                       </div>
                       <div class="details-modal-content">
-                        <form action="" class="form-popup">
+                        <form action="vista_citas_usuario.php" method="post" class="form-popup">
                             <label for="">Fecha</label>
-                            <input type="Date" name="" id="">
+                            <input type="datetime-local" name="fecha" id="fecha">
                             <label for="">Asunto</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="asunto" id="asunto">
                             <label for="">Mascota</label>
-                            <select name="" id="mascotas-p" class="mascotas-p-c">
-                              <option value="" id="mascotas-op"></option>
-                              <option value="" id="mascotas-op">a</option>
-                              <option value="" id="mascotas-op">a</option>
+                            <select name="mascota" id="mascotas-p" class="mascotas-p-c">
+                            <?php foreach ($clientemascotas as $mascota) { ?>
+                              <option value="<?php echo $mascota['id_mascota']; ?>">
+                                <?php echo $mascota['nombre']; ?> 
+                              </option>
+                            <?php } ?>
                             </select>
-                            <button id="btn-p">Enviar</button>
+                            <button id="btn-p" type="submit" name="accion" value="agregar">Enviar</button>
                         </form>
                       </div>
                     </div>
@@ -61,24 +54,24 @@ include('../templates/header.php');
         <div class="tabla">
             <div class="titulos">
                 <h4>Status</h4>
-                <h4>Tipo de cita</h4>
-                <h4>Fecha/Tiempo</h4>
                 <h4>Asunto</h4>
-                <h4>Doctor</h4>
+                <h4>Fecha/Tiempo</h4>
+                <h4>Mascota</h4>
                 <h4>eliminar</h4>
             </div>
+            <?php foreach ($clienteCitas as $cita) { ?>
             <div class="celda">
-                <p>Pendiente</p>
-                <p>Rapida</p>
-                <p>20/03/2023</p>
-                <p>Dolor en la pata</p>
-                <p>Quinteros</p>
+                <p><?php echo $cita['estado'] ?></p>
+                <p><?php echo $cita['asunto'] ?></p>
+                <p><?php echo $cita['fecha'] ?></p>
+                <p><?php echo $cita['nombre'] ?></p>
                 <button id="eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
                     </svg>
                 </button>
             </div>
+            <?php } ?>
         </div>
     </div>
 <?php

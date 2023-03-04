@@ -22,6 +22,11 @@
 
             session_start();
 
+            if(!isset($_SESSION['usuario'])&& !isset($_SESSION['veterinario']) && !in_array(basename($_SERVER['PHP_SELF']), array('home.php', 'about_us.php', 'form_register.php', 'form_login.php'))){
+                header("Location: ../views/form_login.php");
+                exit();
+            }
+
             if (isset($_SESSION['usuario'])) { ?>
                 <div class="info-h">
                 <a href="../views/home.php">Home</a>

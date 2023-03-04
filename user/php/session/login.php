@@ -36,13 +36,6 @@ if ($_POST) {
     }
 }
 
-
-
-
-
-
-
-
 /*
 if ($_POST) {
 $name = $_POST['name'];
@@ -61,7 +54,5 @@ $consulta = $conexionBD->prepare($sql);
 $consulta->bindParam(':id', $id);
 $consulta->execute();
 $curso=$consulta->fetch(PDO::FETCH_ASSOC); */
-
-
 
 ?>
