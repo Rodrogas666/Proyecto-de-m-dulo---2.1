@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     echo "<script>
             alert('Registro editado !')
-            window.location.href = '/veterinario/php/view_mascotaHistorial.php?id=$id_mascota'
+            window.location.href = 'view_mascotaHistorial.php?id=$id_mascota'
             </script>";
 }
 

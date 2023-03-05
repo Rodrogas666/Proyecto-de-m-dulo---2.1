@@ -15,6 +15,6 @@ $consulta->execute();
 
 echo "<script>
 alert('Cita terminada :)')
-window.location.href = '/veterinario/php/dashboard_citas_accepted.php'
+window.location.href = 'dashboard_citas_accepted.php'
 </script>"
 ?>

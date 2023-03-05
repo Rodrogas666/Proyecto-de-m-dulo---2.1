@@ -17,7 +17,7 @@ if(isset($_SESSION['veterinario'])){
 
     echo "<script>
             alert('Registro eliminado !')
-            window.location.href = '/veterinario/php/view_mascotaHistorial.php?id=$id_mascota'
+            window.location.href = 'view_mascotaHistorial.php?id=$id_mascota'
             </script>";
 
 }

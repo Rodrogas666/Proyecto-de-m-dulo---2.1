@@ -38,7 +38,7 @@ include_once('mis_citas_vet.php');
             <p><?php echo $cita['nombre'] ?></p>
             <br>
             <br>
-            <a href="/veterinario/php/logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a>
+            <a href=".logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a>
         </div>
             
     <?php } ?>

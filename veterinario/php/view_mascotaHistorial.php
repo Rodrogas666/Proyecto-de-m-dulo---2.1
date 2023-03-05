@@ -4,6 +4,7 @@ include_once('../../user/php/templates/header.php');
 include_once('_data_registroMedicoMascota.php');
 include("./.logic_editarRegistroMedico.php");
 
+
 ?>
 <link rel="stylesheet" href="../../user/css/styles_index.css">
 <style>
@@ -125,7 +126,7 @@ include("./.logic_editarRegistroMedico.php");
                     })">
                     Editar
                 </button>
-                    <a href="/veterinario/php/_logic_eliminarRegistroMascota.php?id_mascota=<?=$registro['id_mascota'] ?>&id_registro=<?=$registro['id'] ?>">Eliminar</a>
+                    <a href="_logic_eliminarRegistroMascota.php?id_mascota=<?=$registro['id_mascota'] ?>&id_registro=<?=$registro['id'] ?>">Eliminar</a>
                 </div>
             </div>
 

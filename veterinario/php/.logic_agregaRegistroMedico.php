@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     echo "<script>
             alert('Registro agregado !')
-            window.location.href = '/veterinario/php/view_mascotas.php'
+            window.location.href = 'view_mascotas.php'
             </script>";
 }
 

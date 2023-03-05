@@ -2,7 +2,7 @@
 
 include_once('../../user/php/templates/header.php');
 include_once('_data_mascotas.php');
-include("./.logic_agregarRegistroMascota.php");
+include('./.logic_agregaRegistroMedico.php');
 
 ?>
 <link rel="stylesheet" href="../../user/css/styles_index.css">
@@ -112,7 +112,7 @@ include("./.logic_agregarRegistroMascota.php");
                 <br>
                 <div class="btns">
                     <button onclick="showPopup(<?= $mascota['id'] ?>)">Generar reporte</button>
-                    <a class="btn-medico" href="/veterinario/php/view_mascotaHistorial.php?id=<?= $mascota['id'] ?>">Ver historial medico</a>
+                    <a class="btn-medico" href="view_mascotaHistorial.php?id=<?=$mascota['id']?>">Ver historial medico</a>
 
                 </div>
             </div>

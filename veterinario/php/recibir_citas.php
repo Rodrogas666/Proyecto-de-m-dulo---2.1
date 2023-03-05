@@ -35,6 +35,8 @@ if ($_POST) {
             $consulta3->bindParam(':id_veterinario', $id_veterinario);
             $consulta3->bindParam(':id_cita', $id_cita);
             $consulta3->execute();
+            
+            header("Location: dashboard.php");
         }
     }
 

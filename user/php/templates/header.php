@@ -16,13 +16,13 @@
     <nav>
         <div class="hader">
             <div class="logo">
-                <img src="../templates/img/Mew.png" alt="" id="img-h">
+                <img src="img/Mew.png" alt="" id="img-h">
             </div>
             <?php
 
             session_start();
 
-            if(!isset($_SESSION['usuario'])&& !isset($_SESSION['veterinario']) && !in_array(basename($_SERVER['PHP_SELF']), array('home.php', 'about_us.php', 'form_register.php', 'form_login.php'))){
+            if(!isset($_SESSION['usuario']) && !isset($_SESSION['veterinario']) && !in_array(basename($_SERVER['PHP_SELF']), array('home.php', 'about_us.php', 'form_register.php', 'form_login.php'))){
                 header("Location: ../views/form_login.php");
                 exit();
             }
@@ -34,7 +34,7 @@
                 <a href="../views/vista_citas_usuario.php">Citas</a>
                 <a href="../views/mascota_vista.php">Mascotas</a>
                 </div>
-                <div class="boton-h">
+                <div class="boton-h">   
                 <a href="../session/cerrar_sesion.php">Cerrar sesión</a>
                 </div>
             <?php }

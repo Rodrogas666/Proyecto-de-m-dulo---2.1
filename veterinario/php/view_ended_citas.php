@@ -32,7 +32,7 @@ include_once('./_data_endedCitas.php');
 
 <div>
     <div>
-        <h1 class="titulo">CITAS DE LOS CLIENTES</h1>
+        <h1 class="titulo">CITAS FINALIZADAS</h1>
     </div>
     <br>
     <br>
