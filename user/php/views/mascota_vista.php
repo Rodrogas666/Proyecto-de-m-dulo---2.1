@@ -9,7 +9,7 @@ include('../mascotas.php');
         <br>
         <div class="titulo">
             <h2>Tus mascotas</h2>
-            <b><a href="form_add_mascota.php"><button class="add_pet">Agregar mascota</button></a></b>
+            <b><a class="add_pet_a"href="form_add_mascota.php"><button class="add_pet">Agregar mascota</button></a></b>
         </div>
         <div class="sub1">
         <?php foreach($listaMascotas as $mascota){ ?>
@@ -27,7 +27,8 @@ include('../mascotas.php');
                     <div class="botones">
                         <details>
                             <summary>
-                            <div class="button" id="divFetch">  
+                            
+                            <div class="button" id="divFetch">
                                 Editar
                             </div>
                             <div class="details-modal-overlay"></div>
@@ -58,6 +59,8 @@ include('../mascotas.php');
                         <form action="mascota_vista.php" method="post">
                             <button id="b2" type="submit" name="accion" value="eliminar"><b>Eliminar</b></button>
                         </form>
+                        <button id="b3"><b><a class="historial_pet_a" href="../../../veterinario/php/view_mascotaHistorial.php?id=<?=$mascota['id']?>">Historial</a></b></button>
+                        
                     </div> 
                 </form>
             </div>
