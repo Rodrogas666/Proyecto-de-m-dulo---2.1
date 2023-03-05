@@ -7,7 +7,7 @@ include_once('recibir_citas.php');
 <link rel="stylesheet" href="../../user/css/styles_vista_veterinario_aceptar.css">
  <div class="cositas-veterinario">
       <div class="name-doc">
-        <h1>Welcome doctor terry</h1>
+        <h1>Welcome Leando Rojas</h1>
       </div>
       <div class="apoimens-v">
         <h1>apoiments</h1>
