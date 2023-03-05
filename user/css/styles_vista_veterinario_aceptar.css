@@ -161,9 +161,11 @@ a:hover i{
   align-items: center;
   justify-content: center;
   padding-left: 25rem;
+
 }
 .attendance-list{
-  width: 100%;
+  width: 60rem;
+  height: 25rem;
   padding: 10px;
   margin-top: 10px;
   background: #fff;
