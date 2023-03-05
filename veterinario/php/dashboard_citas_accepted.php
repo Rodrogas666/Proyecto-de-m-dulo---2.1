@@ -8,6 +8,8 @@ include_once('mis_citas_vet.php');
 <style>
     .titulo{
         font-weight: bold;
+        padding-left: 2rem;
+        padding-top: 2rem;
     }
     .contenedor_citas{
         display: grid;
@@ -22,10 +24,38 @@ include_once('mis_citas_vet.php');
     .main{
         margin: 2rem;
     }
+
+    .btn-finalizar{
+        border-radius: 5px;
+        border: none;
+        width: 5.8rem;
+        height: 37px;
+        color: white;
+        cursor: pointer;
+        transition: 0.5s;
+        background-color: #EE1E09;
+        transition: 0.5s;
+    }
+
+    .btn-finalizar:hover{
+        background-color: #ffffff;
+        border: solid 2px #EE1E09;
+        color: #EE1E09;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover{
+        text-decoration: none;
+        color: #EE1E09;
+    }
 </style>
 <div class="main">
     <div>
-        <h1 class="titulo">MIS CITAS ACEPTADAS</h1>
+        <h1 class="titulo">Mis citas aceptadas</h1>
     </div>
     <br>
     <br>
@@ -38,7 +68,7 @@ include_once('mis_citas_vet.php');
             <p><?php echo $cita['nombre'] ?></p>
             <br>
             <br>
-            <a href=".logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a>
+            <button class="btn-finalizar"><a href=".logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a></button>
         </div>
             
     <?php } ?>

@@ -9,7 +9,7 @@ include('../citas.php');
         <div class="agregar-cita">
             <div class="text1">
                 <h1>Mis citas</h1>
-                <p>Check and filter all your medical appoiments here</p>
+                <p>En este apartado podrás encontrar las citas que has generado, en caso de que quieras verlas, puedes hacerlo cuando quieras</p>
             </div>
             <div class="boton-citas">
                 
@@ -53,18 +53,18 @@ include('../citas.php');
         </div>
         <div class="tabla">
             
-                <h4>Status</h4>
-                <h4>Asunto</h4>
-                <h4>Fecha/Tiempo</h4>
-                <h4>Mascota</h4>
-                <h4>eliminar</h4>
+                <h4 class="p1-table">Estatus</h4>
+                <h4 class="p2-table">Asunto</h4>
+                <h4 class="p3-table">Fecha y tiempo</h4>
+                <h4 class="p4-table">Mascota</h4>
+                <h4 class="p5-table" id="eliminar-text">Eliminar</h4>
             
             <?php foreach ($clienteCitas as $cita) { ?>
             
-                <p><?php echo $cita['estado'] ?></p>
-                <p><?php echo $cita['asunto'] ?></p>
-                <p><?php echo $cita['fecha'] ?></p>
-                <p><?php echo $cita['nombre'] ?></p>
+                <p class="p1-table"><?php echo $cita['estado'] ?></p>
+                <p class="p2-table"><?php echo $cita['asunto'] ?></p>
+                <p class="p3-table"><?php echo $cita['fecha'] ?></p>
+                <p class="p4-table"><?php echo $cita['nombre'] ?></p>
                 <button id="eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />

@@ -20,7 +20,7 @@ include('../mascotas.php');
                 <p><b>Detalles</b></p>
                 <p>Especie: <?php echo $mascota['especie']?></p>
                 <p>Raza: <?php echo $mascota['raza']?></p>
-                <p>Genero: <?php echo $mascota['genero']?></p>
+                <p>Género: <?php echo $mascota['genero']?></p>
                 </div>
                 <br>
                 <form action="mascota_vista.php" method="post">

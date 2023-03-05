@@ -98,18 +98,18 @@ include("./.logic_editarRegistroMedico.php");
 </style>
 <div class="main">
     <div>
-        <h1 class="titulo">Observe el registro medico !</h1>
+        <h1 class="titulo">¡Observe el registro médico!</h1>
     </div>
     <br>
     <br>
     <div class="contenedor_citas">
 
         <?php if (empty($registrosMedicos)) { ?>
-            <p>No hay registros medicos para esta mascota !</p>
+            <p>No hay registros médicos para esta mascota</p>
         <?php  } ?>
         <?php foreach ($registrosMedicos as $registro) { ?>
             <div class="citas">
-                <p> <span style="font-weight:700;">Examenes:</span> <?php echo $registro['examenes'] ?></p>
+                <p> <span style="font-weight:700;">Exámenes:</span> <?php echo $registro['examenes'] ?></p>
                 <p> <span style="font-weight:700;">Resultados:</span> <?php echo $registro['resultados'] ?></p>
                 <p> <span style="font-weight:700;">Enfermedades:</span> <?php echo $registro['enfermedades'] ?></p>
                 <p> <span style="font-weight:700;">Medicamentos:</span> <?php echo $registro['medicamentos'] ?></p>
@@ -141,7 +141,7 @@ include("./.logic_editarRegistroMedico.php");
             <span></span>
             <p class="popup-quit" onclick="quitPopup()">X</p>
         </div>
-        <label for="">Examenes</label>
+        <label for="">Exámenes</label>
         <input required   class="popup-text" id="examenes" name="examenes" type="text" placeholder="Examenes: -Examen1 -Examen2 -Examen3">
 
         <label for="">Resultados</label>

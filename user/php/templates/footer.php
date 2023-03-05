@@ -5,7 +5,7 @@
         <div class="papu-m">
             <div class="mid-f">
                 <div class="info-p">
-                    <img src="../templates/img/logo-white.png" alt="" id="img-h">
+                    <img src="../../src/img/logo-white.png" alt="" id="img-h">
                     <P id="space">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore magna 
                         aliqua. Ut enim ad minim  velit esse cillum dolore eu fugiat nulla pariatur.

@@ -71,49 +71,65 @@ include('./.logic_agregaRegistroMedico.php');
     }
 
     .btn-medico {
-        padding: 0.7rem;
-        border-radius: 8px;
+        margin-top: 1rem;
+        border-radius: 5px;
+        border: none;
+        width: 7rem;
+        height: 40px;
         color: white;
-        border: 1px solid white;
-        text-decoration: none;
-        background-color: #000000;
-        transition: ease-in 100ms;
+        cursor: pointer;
+        transition: 0.5s;
+        background-color: #97D8FF;
+        font-size: 1rem
+    }
+
+    .btn-medico:hover {
+        background-color: #ffffff;
+        border: solid 2px #97D8FF;
+        color: #97D8FF;
+        font-size: 1rem
     }
 
     .btns {
         display: flex;
         gap: 2rem;
+        display: flex;
+        justify-content: center;
     }
 
-    .btn-medico:hover {
-        color: black;
-        background-color: white;
-        border: 1px solid black;
+    a{
+        text-decoration: none;
+        background-color: none;
     }
+
+    .space-p{
+        gap: 1rem;
+    }
+
 </style>
 <div class="main">
     <div>
-        <h1 class="titulo">Registro de medicos</h1>
+        <h1 class="titulo">Registro de médicos</h1>
     </div>
+    <br>
     <div>
-        <p>Observe los registros medicos de cada mascota !</p>
+        <p>¡Observe los registros medicos de cada mascota!</p>
     </div>
     <br>
     <br>
     <div class="contenedor_citas">
         <?php foreach ($todasLasMascotas as $mascota) { ?>
             <div class="citas">
-                <p> <span style="font-weight:700;">Nombre:</span> <?php echo $mascota['nombre'] ?></p>
-                <p> <span style="font-weight:700;">Especie:</span> <?php echo $mascota['especie'] ?></p>
-                <p> <span style="font-weight:700;">Raza:</span> <?php echo $mascota['raza'] ?></p>
-                <p> <span style="font-weight:700;">Edad:</span> <?php echo $mascota['edad'] ?></p>
-                <p> <span style="font-weight:700;">Genero:</span> <?php echo $mascota['genero'] ?></p>
+                <p class="space-p"> <span style="font-weight:600;">Nombre:</span> <?php echo $mascota['nombre'] ?></p>
+                <p class="space-p"> <span style="font-weight:600;">Especie:</span> <?php echo $mascota['especie'] ?></p>
+                <p class="space-p"> <span style="font-weight:600;">Raza:</span> <?php echo $mascota['raza'] ?></p>
+                <p class="space-p"> <span style="font-weight:600;">Edad:</span> <?php echo $mascota['edad'] ?></p>
+                <p class="space-p"> <span style="font-weight:600;">Género:</span> <?php echo $mascota['genero'] ?></p>
                 <br>
                 <br>
                 <div class="btns">
-                    <button onclick="showPopup(<?= $mascota['id'] ?>)">Generar reporte</button>
-                    <a class="btn-medico" href="view_mascotaHistorial.php?id=<?=$mascota['id']?>">Ver historial medico</a>
-
+                    <button onclick="showPopup(<?= $mascota['id'] ?>)" class="btn-medico">Generar reporte</button>
+                    <button class="btn-medico"><a class="btn-medico" href="view_mascotaHistorial.php?id=<?=$mascota['id']?>">Ver historial médico</a></button>
                 </div>
             </div>
 
@@ -128,7 +144,7 @@ include('./.logic_agregaRegistroMedico.php');
             <span></span>
             <p class="popup-quit" onclick="quitPopup()">X</p>
         </div>
-        <label for="">Examenes</label>
+        <label for="">Exámenes</label>
         <input required class="popup-text" name="examenes" type="text" placeholder="Examenes: -Examen1 -Examen2 -Examen3">
 
         <label for="">Resultados</label>

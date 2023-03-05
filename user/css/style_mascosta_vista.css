@@ -10,8 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80rem;
-    
+    gap: 70rem;
+    margin-left: 5rem;
+    margin-right: 5rem; 
+    max-width: 100%;
 }
 
 .sub1{
@@ -112,8 +114,8 @@ a:hover {
 
 .add_pet:hover{
     background-color: #ffffff;
-    border: solid 2px #508F2B;
-    color: black;
+    border: solid 2px #45C676;
+    color: #45C676;
 }
 
 
@@ -128,7 +130,6 @@ a:hover {
     color:  #D51A0D ;
     border: solid 2px #D51A0D;
   }
-
 
 
 

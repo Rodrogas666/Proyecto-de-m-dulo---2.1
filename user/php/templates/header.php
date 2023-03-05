@@ -16,7 +16,7 @@
     <nav>
         <div class="hader">
             <div class="logo">
-                <img src="img/Mew.png" alt="" id="img-h">
+                <img src="../../src/img/Mew.png" alt="" id="img-h">
             </div>
             <?php
 
@@ -29,7 +29,7 @@
 
             if (isset($_SESSION['usuario'])) { ?>
                 <div class="info-h">
-                <a href="../views/home.php">Home</a>
+                <a href="../views/home.php">Inicio</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
                 <a href="../views/vista_citas_usuario.php">Citas</a>
                 <a href="../views/mascota_vista.php">Mascotas</a>
@@ -42,8 +42,8 @@
                 <div class="info-h">
                 <a href="../../veterinario/php/dashboard.php">Citas pendientes</a>
                 <a href="../../veterinario/php/dashboard_citas_accepted.php">Citas aceptadas</a>
-                <a href="../../veterinario/php/view_ended_citas.php">Citas Finalizadas</a>
-                <a href="../../veterinario/php/view_mascotas.php">Registro medico</a>    
+                <a href="../../veterinario/php/view_ended_citas.php">Citas finalizadas</a>
+                <a href="../../veterinario/php/view_mascotas.php">Registro médico</a>    
             </div>
                 <div class="boton-h">
                 <a href="../../user/php/session/cerrar_sesion.php">Cerrar sesión</a>
@@ -51,7 +51,7 @@
             <?php } 
             else if (!isset($_SESSION['usuario']) || !isset($_SESSION['veterinario'])) {  ?>
                 <div class="info-h">
-                <a href="../views/home.php">Home</a>
+                <a href="../views/home.php">Inicio</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
                 </div>
                 <div class="boton-h">

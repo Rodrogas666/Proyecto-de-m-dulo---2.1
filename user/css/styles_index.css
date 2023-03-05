@@ -24,13 +24,15 @@ body {
     align-items: center;
     height: 6rem;
     background-color: #FFEFDE80;
+}
 
+.hader a{
+    gap: 2rem;
 }
 
 .logo{
     display: flex;
     justify-content: start;
-    padding-right: 25rem;
 }
 
 header a{
@@ -44,12 +46,14 @@ header a{
     gap: 6rem;
     color: green;
     text-decoration: none;
-
+    justify-content: space-around;
+    margin-left: 10rem;
 }
 
 .info-h a{
     color: black;
     text-decoration: none;
+    text-align: center;
 }
 
 
@@ -74,20 +78,23 @@ header a{
 }
 
 .boton-h a{
-    height: 50px;
-    width: 110px;
-    background-color: #F76313;
+    border-radius: 5px;
+    border: none;
+    width: 9rem;
+    height: 40px;
     color: white;
-    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #F76313;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .boton-h a:hover{
-    background-color: white;
-    border-color: black;
-    color: black;
+    background-color: #ffffff;
+    color: #F76313 ;
+    border: solid 2px #F76313;
 }
 
 
@@ -142,24 +149,25 @@ img {
 #uno {
     background-color: #F76313;
     color: white;
-    border-color: transparent;
-    border-radius: 10px;
-    height: 3rem;
-    width: 8rem;
+    border: none;
+    border-radius: 5px;
+    width: 9rem;
+    height: 40px;
     cursor: pointer;
+    transition: 0.5s;
+
 }
 
 #uno:hover {
-    background-color: white;
-    border-color: black;
-    color: black;
+    background-color: #ffffff;
+    color: #F76313 ;
+    border: solid 2px #F76313;
 }
 
 #telefono {
     width: 30px;
     height: 25px;
-    margin-top: 0.rem;
-
+    margin-top: 0.5rem;
 }
 
 #dos {
@@ -238,6 +246,7 @@ img {
 .cart:hover {
     background-color: #F76313;
     color: white;
+    transition: 0.5s;
 
 }
 
@@ -273,18 +282,19 @@ img {
 #tres {
     background-color: #F76313;
     color: white;
-    border-color: transparent;
-    border-radius: 10px;
-    height: 3rem;
-    width: 8rem;
+    border: none;
+    border-radius: 5px;
+    width: 9rem;
+    height: 40px;
     cursor: pointer;
+    transition: 0.5s;
     margin-bottom: 2rem;
 }
 
 #tres:hover {
-    background-color: white;
-    border-color: black;
-    color: black;
+    background-color: #ffffff;
+    color: #F76313 ;
+    border: solid 2px #F76313;
 }
 
 .boton2 {
@@ -330,21 +340,20 @@ img {
 }
 
 #boton3 {
-    background-color: #FF5B2E;
-    max-width: 8rem;
-    border-radius: 1rem;
-    border-color: transparent;
-    width: 120px;
-    height: 60px;
+    background-color: #F76313;
     color: white;
+    border: none;
+    border-radius: 5px;
+    width: 9rem;
+    height: 40px;
     cursor: pointer;
+    transition: 0.5s;;
 }
 
 #boton3:hover {
-    background-color: transparent;
-    border-color: black;
-    color: black;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #ffffff;
+    color: #F76313 ;
+    border: solid 2px #F76313;
 }
 
 .padre4 {
@@ -409,7 +418,6 @@ img {
     display: flex;
     height: 17rem;
     width: 15rem;
-    background-color: #FFE6D2;
     border-radius: 15px;
 }
 
@@ -418,21 +426,20 @@ img {
 }
 
 #boton4 {
-    background-color: #FF5B2E;
-    max-width: 8rem;
-    border-radius: 1rem;
-    border-color: transparent;
-    width: 120px;
-    height: 60px;
+    background-color: #F76313;
     color: white;
+    border: none;
+    border-radius: 5px;
+    width: 9rem;
+    height: 40px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 #boton4:hover {
-    background-color: transparent;
-    border-color: black;
-    color: black;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: #ffffff;
+    color: #F76313 ;
+    border: solid 2px #F76313;
 }
 
 .papu-m{

@@ -26,7 +26,7 @@ include_once('../mascotas.php');
     <?php }?>
 </table>
 <br><br>
-<a name="" id="" class="btn btn-primary" href="form_agregar_mascota.php" role="button">Añadir mascota?</a>
+<a name="" id="" class="btn btn-primary" href="form_agregar_mascota.php" role="button">Añadir mascota</a>
 
 
 <?php

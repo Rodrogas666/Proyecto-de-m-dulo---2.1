@@ -12,6 +12,7 @@
 include('../templates/header.php');
 
 ?>
+    <div class="contenedor-general">
     <Fieldset id="f1">
         <p id="git" ><b id="git">We build bridges between</b> <span class="d1">companies and coustomers</span></p>
     </Fieldset>
@@ -69,6 +70,7 @@ include('../templates/header.php');
 
     <br>
     <hr id="olo">
+    </div>
 <?php
 include('../templates/footer.php');
 
