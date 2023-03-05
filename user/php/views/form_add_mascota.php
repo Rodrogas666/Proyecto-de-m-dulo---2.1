@@ -7,8 +7,7 @@ include('../mascotas.php');
     <div class="container-form">
         <div class="info-form">
             <h2>Registra a tu mascota</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eligendi est voluptates quae ipsam eius, in
-                quasi odio porro aut vel beatae aperiam.</p>
+            <p>¿Tienes más de una mascota? No hay problema puedes agregar las mascotas que quieras.</p>
             <img src="../../src/img/f1280x720-966888_1098563_7846.jpg" alt="" id="wenamechi">
         </div>
         <div class="for">

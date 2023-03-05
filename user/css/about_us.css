@@ -14,7 +14,7 @@
     border: none;
     width: 700px;
     font-size: 15px;
-    margin-left: 645px;
+    margin-left: 690px;
     margin-top: -90px;
     color: rgb(96, 99, 98);
 }
@@ -37,12 +37,13 @@
 
 #f5{
     border: none;
-    width: 550px;
+    width: 500px;
     margin-left: 40px;
-    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: 700px;
     font-size: 18px;
     color: rgb(96, 99, 98);
+    font-size: 2rem;
 }
 
 #f6{
@@ -79,6 +80,8 @@
     margin-top: 225px;
     background-color: rgb(109, 108, 108);
     border: none;
+    margin-bottom: 2rem;
+    margin-top: 18rem;
 }
 
 hr{
@@ -94,6 +97,8 @@ hr{
     margin-top: 25px;
     background-color: rgb(109, 108, 108);
     border: none;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 #olo{
@@ -154,4 +159,19 @@ HR{
 .contenedor-general{
     margin: 9rem 9rem 9rem 9rem;
 }
+
+.datos{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    text-align: center;
+    gap: 0.4rem;
+}
+
+.leandro{
+    margin-left: 10rem;
+    font-size: 2rem;
+}
+
+
 

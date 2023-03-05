@@ -9,7 +9,7 @@ include('../citas.php');
         <div class="agregar-cita">
             <div class="text1">
                 <h1>Mis citas</h1>
-                <p>En este apartado podrás encontrar las citas que has generado, en caso de que quieras verlas, puedes hacerlo cuando quieras</p>
+                <p>En este apartado podrás encontrar las citas que has generado, en caso de que quieras verlas, puedes hacerlo cuando quieras.</p>
             </div>
             <div class="boton-citas">
                 
