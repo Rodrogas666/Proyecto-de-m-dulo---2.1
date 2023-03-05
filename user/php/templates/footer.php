@@ -35,5 +35,30 @@
             </div>
         </div>
     </footer>
+    <style>
+        .papu-m{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 23rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.mid-f{
+    display: flex;
+    flex-direction: row;
+    gap: 17rem;
+}
+
+.info-p{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    gap: 1rem;
+}
+    </style>
 </body>
 </html>

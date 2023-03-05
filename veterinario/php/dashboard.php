@@ -4,69 +4,46 @@ include_once('../../user/php/templates/header.php');
 include_once('recibir_citas.php');
 
 ?>
-<link rel="stylesheet" href="../../user/css/styles_index.css">
-<style>
-    .titulo {
-        font-weight: bold;
-        padding-left: 2rem;
-        padding-top: 2rem;
-    }
-
-    .contenedor_citas {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .citas {
-        border: 1px solid black;
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 10px;
-    }
-
-    .btn-agregar{
-        margin-top: 1rem;
-        border-radius: 5px;
-        border: none;
-        width: 5.8rem;
-        height: 37px;
-        color: white;
-        cursor: pointer;
-        transition: 0.5s;
-        background-color: #45C676;
-        transition: 0.5s;
-    }
-
-    .btn-agregar:hover{
-        background-color: #ffffff;
-        border: solid 2px #45C676;
-        color: #45C676;
-    }
-</style>
-
-<div>
-    <div>
-        <h1 class="titulo">Citas de los clientes</h1>
+<link rel="stylesheet" href="../../user/css/styles_vista_veterinario_aceptar.css">
+ <div class="cositas-veterinario">
+      <div class="name-doc">
+        <h1>Welcome doctor terry</h1>
+      </div>
+      <div class="apoimens-v">
+        <h1>apoiments</h1>
+        <h2>28</h2>
+      </div>
     </div>
-    <br>
-    <br>
-    <div class="contenedor_citas">
-        <?php foreach ($clienteCitas as $cita) { ?>
-            <form class="citas" action="dashboard.php" method="post">
-                <p><?php echo $cita['estado'] ?></p>
-                <p><?php echo $cita['asunto'] ?></p>
-                <p><?php echo $cita['fecha'] ?></p>
-                <p><?php echo $cita['nombre'] ?></p>
-
-                <input type="hidden" name="id" value="<?php echo $cita['id_cita'] ?>">
-                <button type="submit" name="accion" value="agregar" class="btn-agregar">Agregar cita</button>
-                <br>
-                <br>
-                <br>
-            </form>
-        <?php } ?>
-    </div>
-</div>
+      <section class="attendance">
+        <div class="attendance-list">
+          <h1>Attendance List</h1>
+          <form action="dashboard.php" method="post">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Asunto</th>
+                  <th>Fecha/tiempo</th>
+                  <th>Mascota</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($clienteCitas as $cita) { ?>
+            <tr>
+              <td><?php echo $cita['estado'] ?></td>
+              <td><?php echo $cita['asunto'] ?></td>
+              <td><?php echo $cita['fecha'] ?></td>
+              <td><?php echo $cita['nombre'] ?></td>
+              <td><button type="submit" name="accion" value="agregar">Agregar cita</button></td>
+              <input type="hidden" name="id" value="<?php echo $cita['id_cita'] ?>">
+            </tr>
+            <?php } ?>
+            </tbody>
+          </table>
+          </form>
+        </div>
+      </section>
 
 
 <?php
