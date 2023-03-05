@@ -29,7 +29,7 @@
 
             if (isset($_SESSION['usuario'])) { ?>
                 <div class="info-h">
-                <a href="../../user/php/views/home.php">Home</a>
+                <a href="../../user/php/views/home.php">Inicio</a>
                 <a href="../../user/php/views/about_us.php">Sobre nosotros</a>
                 <a href="../../user/php/views/vista_citas_usuario.php">Citas</a>
                 <a href="../../user/php/views/mascota_vista.php">Mascotas</a>
@@ -51,7 +51,7 @@
             <?php } 
             else if (!isset($_SESSION['usuario']) || !isset($_SESSION['veterinario'])) {  ?>
                 <div class="info-h">
-                <a href="../views/home.php">Home</a>
+                <a href="../views/home.php">Inicio</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
                 </div>
                 <div class="boton-h">
