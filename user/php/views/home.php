@@ -8,29 +8,23 @@ include('../templates/header.php');
     <div class="padre">
         <div class="sub">
             <div class="titulo">
-                <h1>Lets book a call and stay connected</h1>
+                <h1>Somos los que cuidamos de tu familia</h1>
             </div>
             <div class="checkbox">
                 <input type="checkbox" name="" id="checkbox1">
-                <p>Vaccination Service</p>
+                <p>Citas</p>
                 <input type="checkbox" name="" id="checkbox2">
-                <p>Veterinary Servicie</p>
+                <p>Registros médicos</p>
             </div>
             <div class="textoo">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.</p>
+                <p>Somos una clínica veterinaria con más de 11 años de experiencia, contamos con una amplia gama de profesionales en el área médica, siéntete tranquilo en confiarnos a tu familia. Estaremos más que encantados de poder ayudarte con nuestros diferentes servicios.</p>
             </div>
             <div class="botones">
-                <button id="uno">Book a schedule</button>
+            
+                <a href="../../php/views/vista_citas_usuario.php"><button id="uno">Ver mis citas</button></a>
                 <div class="cositas">
                     <img src="../../src/img/llamada-telefonica.png" alt="" id="telefono">
-                    <button id="dos">Emergency call</button>
+                    <button id="dos">2257-2353</button>
                 </div>
             </div>
         </div>
@@ -43,99 +37,97 @@ include('../templates/header.php');
         <div class="sub2">
             <div class="titulo2">
                 <img src="" alt="" id="iconoP">
-                <h1>Our Services</h1>
+                <h1>Nuestros servicios</h1>
             </div>
             <div class="texto2">
-                <p>Best pets are waiting for adpotion. find out the the perfect one you will it it´s our promise</p>
-                <p>one you will it it´s our promise</p>
+                <p>Contamos con una amplia gama de servicios para ayudarte.</p>
+                <p>¡Anímate a traer a tu mascota!</p>
             </div>
         </div>
         <div class="cartas">
             <div class="cart">
                 <img src="../../src/img/Screenshot_5-removebg-preview 1.png" alt="" id="img1">
-                <h1>Vaccination</h1>
-                <p>perfect one you will like it. it´s our promise</p>
+                <h1>Vacunación</h1>
+                <p>Vacunamos mascotas, y llevamos el control de la misma.</p>
             </div>
             <div class="cart">
                 <img src="../../src/img/cat 1-4 1.png" alt="" id="img2">
-                <h1>Pet grooming</h1>
-                <p>perfect one you will like it its our promise</p>
+                <h1>Corte de pelaje</h1>
+                <p>¿Estás preocupado por el exceso de pelaje?, ven con nosotros.</p>
             </div>
             <div class="cart">
                 <img src="../../src/img/Screenshot_6-removebg-preview 1.png" alt="" id="img3">
-                <h1>Veterinary</h1>
-                <p>perfect one you will like it its our promise</p>
+                <h1>Consultas</h1>
+                <p>Atendemos a tus mascotas por medio de citas que tú creas.</p>
             </div>
             <div class="cart">
                 <img src="../../src/img/Screenshot_7-removebg-preview 1.png" alt="" id="img4">
-                <h1>Cleaning</h1>
-                <p>perfect one you will like it its our promise</p>
+                <h1>Masajes</h1>
+                <p>¿Tu perro tiene problemas en su cuerpo? Un buen masaje lo ayudará</p>
             </div>
         </div>
         <div class="boton2">
-            <button id="tres">Learn More</button>
+            <a href="../views/about_us.php"><button id="tres">Ver más</button></a>
         </div>
     </div>
 
     <div class="padre3">
         <div class="titulo3">
-            <h1>Our Gromers</h1>
+            <h1>Nuestros veterinarios</h1>
         </div>
         <div class="sub3">
             <div class="cards-img">
                 <img src="../../src/img/cositas1.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Leandro</h3>
+                    <h3>Leandro Rojas</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>backend developer</p>
+                    <p>Licenciatura en Medicina Veterinaria y Zootecnia</p>
                 </div>
             </div>
             <div class="cards-img">
                 <img src="../../src/img/cositas2.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Rodrigo</h3>
+                    <h3>José Saz</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>backend developer</p>
+                    <p>	Médico Veterinario Zootecnista</p>
                 </div>
             </div>
             <div class="cards-img">
                 <img src="../../src/img/cositas3.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Fernando</h3>
+                    <h3>Fernando Calles</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Fronent developer</p>
+                    <p>	Médico Veterinario Zootecnista</p>
                 </div>
             </div>
             <div class="cards-img">
                 <img src="../../src/img/cositas4.png" alt="" id="personas">
                 <div class="titulo-cards">
-                    <h3>Oswaldo</h3>
+                    <h3>Luciana Olinda</h3>
                 </div>
                 <div class="texto-cards">
-                    <p>Fronent developer</p>
+                    <p>Licenciatura en Medicina Veterinaria y Zootecnia</p>
                 </div>
             </div>
         </div>
         <div class="boton3">
-            <button id="boton3">View team</button>
+        <a href="../views/about_us.php"><button id="tres">Ver más</button></a>
         </div>
     </div>
     <div class="padre4">
         <div class="sub4">
             <div class="lado1">
                 <div class="titulol1">
-                    <h1>Dacode Blog</h1>
+                    <h1>Apartado de honor</h1>
                 </div>
                 <div class="texl1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>¡Sigue navegando para ver más de nuestra historia!</p>
                 </div>
                 <div class="botonl1">
-                    <button id="boton4">Learn More</button>
+                <a href="../views/about_us.php"><button id="tres">Ver más</button></a>
                 </div>
             </div>
             <div class="lado2">
@@ -144,11 +136,10 @@ include('../templates/header.php');
                 </div>
                 <div class="lado2-0">
                     <div class="titulol2">
-                        <h3>Why Your SaaS Business should use WordPress</h3>
+                        <h3>Nuestra historia</h3>
                     </div>
                     <div class="textol2">
-                        <p>A content management system like WordPress can help you build
-                            a highly engaging website for your SaaS business, with little to no effort</p>
+                        <p>Esta, es nuestra mascota Eimy, la mascota de la casa a la que llenamos de mucho amor, ven a ser parte de nuestra familia, de mascotas felices.</p>
                     </div>
                 </div>
             </div>
