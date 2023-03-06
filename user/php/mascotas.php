@@ -49,8 +49,13 @@ if ($_POST) {
                     $consulta2->bindParam(':id_mascota', $ultimo_id_mascota);
                     $consulta2->bindParam(':id_cliente', $id_cliente);
                     $consulta2->execute();
+
+                    echo "<script>
+                    alert('Mascota agregada :)')
+                    window.location.href = 'mascota_vista.php'
+                    </script>";
         
-                    header("Location: mascota_vista.php");
+                    // header("Location: mascota_vista.php");
             } else {
                 echo "Llena todo";
             }
@@ -69,7 +74,12 @@ if ($_POST) {
                 $consulta->bindParam(':genero', $genero);
                 $consulta->execute();
 
-                header("Location: mascota_vista.php");
+                echo "<script>
+                    alert('Datos de mascota editados :)')
+                    window.location.href = 'mascota_vista.php'
+                    </script>";
+
+                // header("Location: mascota_vista.php");
                 // echo $sql;
                 break;
 
@@ -79,7 +89,12 @@ if ($_POST) {
                 $consulta->bindParam(':id_mascota', $id_mascota);
                 $consulta->execute();
 
-                header("Location: mascota_vista.php");
+                echo "<script>
+                    alert('Mascota eliminada :)')
+                    window.location.href = 'mascota_vista.php'
+                    </script>";
+
+                // header("Location: mascota_vista.php");
 
                 break;
 

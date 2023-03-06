@@ -46,7 +46,12 @@ if ($accion != '') {
             $consulta->bindParam(':id_mascota', $mascota);
             $consulta->execute();
 
-            header("Location: vista_citas_usuario.php");
+            echo "<script>
+            alert('Cita agendada :)')
+            window.location.href = 'vista_citas_usuario.php'
+            </script>";
+
+            // header("Location: vista_citas_usuario.php");
 
             // print_r($sql);
 

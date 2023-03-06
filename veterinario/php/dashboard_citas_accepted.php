@@ -62,10 +62,10 @@ include_once('mis_citas_vet.php');
     <div class="contenedor_citas">
     <?php foreach ($vetCitas as $cita) { ?>
         <div class="citas">
-            <p><?php echo $cita['estado'] ?></p>
-            <p><?php echo $cita['asunto'] ?></p>
-            <p><?php echo $cita['fecha'] ?></p>
-            <p><?php echo $cita['nombre'] ?></p>
+            <p> <span style="font-weight:bold;">Estado:</span> <?php echo $cita['estado'] ?></p>
+            <p> <span style="font-weight:bold;">Asunto:</span> <?php echo $cita['asunto'] ?></p>
+            <p> <span style="font-weight:bold;">Fecha:</span> <?php echo $cita['fecha'] ?></p>
+            <p> <span style="font-weight:bold;">Mascota:</span> <?php echo $cita['nombre'] ?></p>
             <br>
             <br>
             <button class="btn-finalizar"><a href=".logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a></button>

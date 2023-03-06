@@ -5,7 +5,12 @@
         <div class="papu-m">
             <div class="mid-f">
                 <div class="info-p">
-                    <img src="../../src/img/logo-white.png" alt="" id="img-h">
+                    <?php if (isset($_SESSION['usuario'])) { ?>
+                        <img src="../../src/img/logo-white.png" alt="" id="img-h">
+                    <?php  } 
+                    if (isset($_SESSION['veterinario'])) { ?>
+                        <img src="../../user/src/img/logo-white.png" alt="" id="img-h">
+                    <?php } ?>
                     <P id="space">Somos una clínica veterinaria con más de 11 años de experiencia, contamos con una amplia gama de profesionales en el área médica, siéntete tranquilo en confiarnos a tu familia. Estaremos más que encantados de poder ayudarte con nuestros diferentes servicios.
                     </P>
                 </div>

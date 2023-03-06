@@ -33,7 +33,7 @@ include('../citas.php');
                       <div class="details-modal-content">
                         <form action="vista_citas_usuario.php" method="post" class="form-popup">
                             <label for="">Fecha</label>
-                            <input type="datetime-local" name="fecha" id="fecha">
+                            <input required type="datetime-local" name="fecha" id="fecha">
                             <label for="">Asunto</label>
                             <input type="text" name="asunto" id="asunto">
                             <label for="">Mascota</label>

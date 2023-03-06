@@ -32,7 +32,10 @@ if ($_POST) {
         header('Location:../../../veterinario/php/dashboard.php');
 
     } else {
-        echo "Usuario o contraseña incorrectos >(";
+        echo "<script>
+        alert('Contraseña o usuario incorrecto :)')
+        window.location.href = '../views/form_login.php'
+        </script>";
     }
 }
 
