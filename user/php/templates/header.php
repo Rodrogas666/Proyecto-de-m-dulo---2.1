@@ -9,25 +9,29 @@
     <title>Veterinaria</title>
 </head>
 
+<?php
+    session_start();
+
+    if(!isset($_SESSION['usuario']) && !isset($_SESSION['veterinario']) && !in_array(basename($_SERVER['PHP_SELF']), array('home.php', 'about_us.php', 'form_register.php', 'form_login.php'))){
+        header("Location: ../views/form_login.php");
+        exit();
+    }
+
+?>
+
 
 <body>
 
 <header>
     <nav>
         <div class="hader">
-            <div class="logo">
-                <img src="../../src/img/Mew.png" alt="" id="img-h">
-            </div>
+            
             <?php
 
-            session_start();
-
-            if(!isset($_SESSION['usuario']) && !isset($_SESSION['veterinario']) && !in_array(basename($_SERVER['PHP_SELF']), array('home.php', 'about_us.php', 'form_register.php', 'form_login.php'))){
-                header("Location: ../views/form_login.php");
-                exit();
-            }
-
             if (isset($_SESSION['usuario'])) { ?>
+                <div class="logo">
+                    <img src="../../src/img/Mew.png" alt="" id="img-h">
+                </div>
                 <div class="info-h">
                 <a href="../views/home.php">Inicio</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
@@ -39,6 +43,9 @@
                 </div>
             <?php }
             else if (isset($_SESSION['veterinario'])) { ?>
+                <div class="logo">
+                    <img src="../../user/src/img/Mew.png" alt="" id="img-h">
+                </div>
                 <div class="info-h">
                 <a href="../../veterinario/php/dashboard.php">Citas pendientes</a>
                 <a href="../../veterinario/php/dashboard_citas_accepted.php">Citas aceptadas</a>
@@ -50,6 +57,9 @@
                 </div>
             <?php } 
             else if (!isset($_SESSION['usuario']) || !isset($_SESSION['veterinario'])) {  ?>
+                <div class="logo">
+                    <img src="../../src/img/Mew.png" alt="" id="img-h">
+                </div>
                 <div class="info-h">
                 <a href="../views/home.php">Inicio</a>
                 <a href="../views/about_us.php">Sobre nosotros</a>
