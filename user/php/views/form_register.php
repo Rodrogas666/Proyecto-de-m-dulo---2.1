@@ -35,10 +35,9 @@ include('../templates/header.php');
             <input type="password" name="password" id="input" placeholder="  Enter your password" >
             <br>
             <br>
-            <input type="checkbox" name="" id=""><p id="uwu"><b>Remenber 30 days</b></p>
             <input type="submit" value="Sign in" id="boton1">
             <br>
-            <input type="submit" value="Sign in with Google" id="boton">
+            
 </form>
             
         </div>
