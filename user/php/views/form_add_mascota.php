@@ -12,12 +12,12 @@ include('../mascotas.php');
         </div>
         <div class="for">
             <form action="form_add_mascota.php" method="post">
-                <input type="text" name="nombre" placeholder="Nombre" class="campo">
-                <input type="number" name="edad" placeholder="Edad" class="campo">
-                <input type="text" name="especie" placeholder="Especie" class="campo">
-                <input type="text" name="raza" placeholder="Raza" class="campo">
-                <input type="text" name="genero" placeholder="Género" class="campo">
-                <button type="submit" name="accion" value="agregar" class="btn-enviar">Agregar mascota</button>
+                <input required type="text" name="nombre" placeholder="Nombre" class="campo">
+                <input required type="number" name="edad" placeholder="Edad" class="campo">
+                <input required type="text" name="especie" placeholder="Especie" class="campo">
+                <input required type="text" name="raza" placeholder="Raza" class="campo">
+                <input required type="text" name="genero" placeholder="Género" class="campo">
+                <button required type="submit" name="accion" value="agregar" class="btn-enviar">Agregar mascota</button>
             </form>
         </div>
     </div>

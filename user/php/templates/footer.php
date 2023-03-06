@@ -6,7 +6,7 @@
             <div class="mid-f">
                 <div class="info-p">
                     <?php if (isset($_SESSION['usuario'])) { ?>
-                        <img src="../../src/img/logo-white.png" alt="" id="img-h">
+                        <img src="../../user/src/img/logo-white.png" alt="" id="img-h">
                     <?php  } 
                     if (isset($_SESSION['veterinario'])) { ?>
                         <img src="../../user/src/img/logo-white.png" alt="" id="img-h">

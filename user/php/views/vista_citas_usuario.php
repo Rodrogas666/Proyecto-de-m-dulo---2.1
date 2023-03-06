@@ -35,9 +35,9 @@ include('../citas.php');
                             <label for="">Fecha</label>
                             <input required type="datetime-local" name="fecha" id="fecha">
                             <label for="">Asunto</label>
-                            <input type="text" name="asunto" id="asunto">
+                            <input required type="text" name="asunto" id="asunto">
                             <label for="">Mascota</label>
-                            <select name="mascota" id="mascotas-p" class="mascotas-p-c">
+                            <select required name="mascota" id="mascotas-p" class="mascotas-p-c">
                             <?php foreach ($clientemascotas as $mascota) { ?>
                               <option value="<?php echo $mascota['id_mascota']; ?>">
                                 <?php echo $mascota['nombre']; ?> 

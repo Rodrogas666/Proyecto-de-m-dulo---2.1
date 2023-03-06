@@ -29,7 +29,7 @@ if(!isset($_SESSION['usuario']) && !isset($_SESSION['veterinario']) && !in_array
 
             if (isset($_SESSION['usuario'])) { ?>
                 <div class="logo">
-                    <img src="../../src/img/Mew.png" alt="" id="img-h">
+                    <img src="../../user/src/img/Mew.png" alt="" id="img-h">
                 </div>
                 <div class="info-h">
                 <a href="../../user/php/views/home.php">Inicio</a>
