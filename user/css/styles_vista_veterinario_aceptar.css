@@ -10,9 +10,9 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  margin-left: 20rem;
-  margin-top: 5rem;
-  gap: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2rem;
 }
 
 .apoimens-v{
@@ -21,22 +21,14 @@
   gap: 49rem;
 }
 
-/*Attendance List serction  */
-.attendance{
-  margin-top: 20px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 25rem;
 
+.attendance{
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
 }
+
 .attendance-list{
-  width: 60rem;
-  height: 25rem;
-  margin-left: -25rem;
-  margin-top: 10px;
-  margin-bottom: 5rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
