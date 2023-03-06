@@ -1,3 +1,21 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 06-03-2023 a las 03:48:16
+-- Versión del servidor: 8.0.30
+-- Versión de PHP: 8.1.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `veterinaria`
@@ -11,33 +29,20 @@
 
 CREATE TABLE `citas` (
   `id_cita` int NOT NULL,
-  `asunto` text   NOT NULL,
+  `asunto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `fecha` datetime NOT NULL,
   `estado` varchar(255) NOT NULL,
   `id_cliente` int NOT NULL,
   `id_mascota` int NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `citas`
 --
 
 INSERT INTO `citas` (`id_cita`, `asunto`, `fecha`, `estado`, `id_cliente`, `id_mascota`) VALUES
-(10, 'Fractura de pata', '2023-03-01 03:30:00', 'Taken', 1, 3),
-(11, 'A mi perro le cuesta respirar', '2023-03-12 14:00:00', 'Not taken', 1, 3),
-(12, 'fasdfdsafasdfsadfasfas', '2023-01-31 03:21:00', 'Not taken', 1, 3),
-(17, 'fasdfdsafasdfsadfasfas', '2023-01-31 03:21:00', 'Not taken', 1, 3),
-(18, 'fasdfdsafasdfsadfasfas', '2023-01-31 03:21:00', 'Not taken', 1, 3),
-(19, 'si   ', '2023-02-27 21:57:00', 'Taken', 1, 3),
-(20, 'Mi perro no come', '2023-03-02 11:30:00', 'Not taken', 2, 2),
-(21, 'wazados', '2024-01-31 03:21:00', 'Taken', 2, 1),
-(23, 'Mi gato no come', '2023-11-11 11:11:00', 'Not taken', 2, 1),
-(28, 'ajam', '2023-05-23 10:00:00', 'Not taken', 2, 1),
-(29, 'prueba con gerardo', '2023-02-12 03:21:00', 'Taken', 1, 16),
-(30, 'prueba', '2023-11-11 12:01:00', 'Not taken', 2, 17),
-(31, 'Mi perro está desanimado', '2023-03-04 12:00:00', 'Not taken', 1, 16),
-(32, 'Mi perro está desanimado', '2023-03-04 12:00:00', 'Not taken', 1, 16),
-(33, 'Mi perrito está enfermo', '2023-07-06 14:00:00', 'Not taken', 1, 16);
+(39, 'Mi gato está orinando sangre', '2023-03-10 10:00:00', 'Not taken', 3, 33),
+(40, 'Mi gato necesita un chequeo', '2023-03-14 08:00:00', 'Not taken', 3, 34);
 
 -- --------------------------------------------------------
 
@@ -51,7 +56,7 @@ CREATE TABLE `cliente` (
   `apellido` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
   `contrasenia` varchar(255) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `cliente`
@@ -59,7 +64,8 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`id`, `nombre`, `apellido`, `correo`, `contrasenia`) VALUES
 (1, 'Leandro', 'Valencia', 'quinterosmachista@gmail.com', '12345'),
-(2, 'Lucas', 'Jimenez', 'machado@gmail.com', 'machado');
+(2, 'Lucas', 'Jimenez', 'machado@gmail.com', 'machado'),
+(3, 'Norberto', 'Colorado', 'norberto.fenix@gmail.com', 'maritza');
 
 -- --------------------------------------------------------
 
@@ -71,7 +77,7 @@ CREATE TABLE `clientemascotas` (
   `id` int NOT NULL,
   `id_mascota` int NOT NULL,
   `id_cliente` int NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `clientemascotas`
@@ -80,9 +86,12 @@ CREATE TABLE `clientemascotas` (
 INSERT INTO `clientemascotas` (`id`, `id_mascota`, `id_cliente`) VALUES
 (1, 1, 2),
 (2, 3, 1),
-(3, 2, 2),
 (10, 16, 1),
-(11, 17, 2);
+(11, 17, 2),
+(17, 25, 2),
+(23, 31, 2),
+(25, 33, 3),
+(26, 34, 3);
 
 -- --------------------------------------------------------
 
@@ -97,18 +106,21 @@ CREATE TABLE `mascota` (
   `raza` varchar(255) NOT NULL,
   `edad` int NOT NULL,
   `genero` varchar(15) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `mascota`
 --
 
 INSERT INTO `mascota` (`id`, `nombre`, `especie`, `raza`, `edad`, `genero`) VALUES
-(1, 'Aristides', 'Canino', 'Náhuat', 1000, 'Macho'),
-(2, 'canelon', 'Canino', 'aguacatero', 3, 'Macho'),
-(3, 'fernandoflo', 'Ave', 'si', 2, 'Hembra'),
-(16, 'Gerardo', 'Felino', 'Balinés', 2, 'Hembra'),
-(17, 'Juca', 'Canino', 'Hush puppie', 3, 'Hembra');
+(1, 'Zeus', 'Canino', 'Huskey', 5, 'Macho'),
+(3, 'Chepe', 'Ave', 'Guacamayo', 1, 'Hembra'),
+(16, 'Donatello', 'Tortuga', 'Egipcia', 2, 'Hembra'),
+(17, 'Juca', 'Canino', 'Hush puppie', 3, 'Hembra'),
+(25, 'Michi', 'Felino', 'Albino', 2, 'Hembra'),
+(31, 'Manchitas', 'Canino', 'Pastor alemán', 1, 'Macho'),
+(33, 'Pikachu', 'Felino', 'Naranja', 2, 'Macho'),
+(34, 'Nyamero', 'Felino', 'Blanco', 2, 'Hembra');
 
 -- --------------------------------------------------------
 
@@ -123,14 +135,16 @@ CREATE TABLE `registro_medico` (
   `enfermedades` text NOT NULL,
   `medicamentos` text NOT NULL,
   `id_mascota` int NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `registro_medico`
 --
 
 INSERT INTO `registro_medico` (`id`, `examenes`, `resultados`, `enfermedades`, `medicamentos`, `id_mascota`) VALUES
-(1, '- Análisis de sangre\r\n- Medición de la presión\r\n- Análisis de orina \r\n- Análisis de glaucoma', '- Sangre: B+\r\n- Presión: Regular\r\n- Orina: Normal\r\n- Glaucoma: Normal', '- Hepatitis infecciosa\r\n- Gastroenteritis', '- Carprofeno\r\n- Deracoxib', 3);
+(1, '- Análisis de sangre\n- Medición de la presión\n- Análisis de orina \n- Análisis de glaucoma', '- Sangre: B+\r\n- Presión: Regular\r\n- Orina: Normal\r\n- Glaucoma: Normal', '- Hepatitis infecciosa\r\n- Gastroenteritis', '- Carprofeno\r\n- Deracoxib', 3),
+(6, 'Exámen de sangre', 'B+', 'Gripe', 'Acetaminofén', 3),
+(7, 'Exámen de sangre', 'B+', 'Gripe', 'Acetaminofén', 17);
 
 -- --------------------------------------------------------
 
@@ -143,15 +157,17 @@ CREATE TABLE `veterinario` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
-  `contrasenia` varchar(255)   NOT NULL
-) ENGINE=InnoDB;
+  `contrasenia` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `veterinario`
 --
 
 INSERT INTO `veterinario` (`id`, `nombre`, `apellido`, `correo`, `contrasenia`) VALUES
-(1, 'Juan ', 'Quinteros', 'quinterosaraujo@gmail.com', 'sofia123');
+(1, 'Juan ', 'Quinteros', 'quinterosaraujo@gmail.com', 'sofia123'),
+(2, 'José ', 'Luis', 'joseluis@gmail.com', 'ligando'),
+(3, 'Ferchofloo', 'Jímenez', 'fercho@gmail.com', 'apexlegends');
 
 -- --------------------------------------------------------
 
@@ -163,17 +179,7 @@ CREATE TABLE `veterinariocitas` (
   `id` int NOT NULL,
   `id_veterinario` int NOT NULL,
   `id_cita` int NOT NULL
-) ENGINE=InnoDB;
-
---
--- Volcado de datos para la tabla `veterinariocitas`
---
-
-INSERT INTO `veterinariocitas` (`id`, `id_veterinario`, `id_cita`) VALUES
-(1, 1, 21),
-(4, 1, 10),
-(6, 1, 19),
-(7, 1, 29);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Índices para tablas volcadas
@@ -236,43 +242,43 @@ ALTER TABLE `veterinariocitas`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_cita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `clientemascotas`
 --
 ALTER TABLE `clientemascotas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `registro_medico`
 --
 ALTER TABLE `registro_medico`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `veterinario`
 --
 ALTER TABLE `veterinario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `veterinariocitas`
 --
 ALTER TABLE `veterinariocitas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
@@ -306,3 +312,6 @@ ALTER TABLE `veterinariocitas`
   ADD CONSTRAINT `veterinariocitas_ibfk_2` FOREIGN KEY (`id_cita`) REFERENCES `citas` (`id_cita`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

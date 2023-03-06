@@ -62,5 +62,14 @@
     gap: 1rem;
 }
     </style>
+<script type="text/javascript">
+    function noRegresar() {
+      window.history.forward()
+    };
+    setTimeout("noRegresar()", 0);
+    window.onunload = function() {
+      null
+    };
+  </script>
 </body>
 </html>
