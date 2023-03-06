@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-03-2023 a las 03:48:16
+-- Tiempo de generación: 06-03-2023 a las 03:56:58
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -42,7 +42,11 @@ CREATE TABLE `citas` (
 
 INSERT INTO `citas` (`id_cita`, `asunto`, `fecha`, `estado`, `id_cliente`, `id_mascota`) VALUES
 (39, 'Mi gato está orinando sangre', '2023-03-10 10:00:00', 'Not taken', 3, 33),
-(40, 'Mi gato necesita un chequeo', '2023-03-14 08:00:00', 'Not taken', 3, 34);
+(40, 'Mi gato necesita un chequeo', '2023-03-14 08:00:00', 'Not taken', 3, 34),
+(41, 'Mi perro se fracturó una pata ', '2023-03-07 11:00:00', 'Not taken', 2, 17),
+(42, 'Le golpearon la costilla a mi perro', '2023-03-08 06:00:00', 'Not taken', 2, 35),
+(43, 'No puede comer por fractura en el pico', '2023-03-06 09:00:00', 'Not taken', 1, 3),
+(44, 'Mi tortuga es muy lenta', '2023-03-09 07:00:00', 'Taken', 1, 16);
 
 -- --------------------------------------------------------
 
@@ -91,7 +95,8 @@ INSERT INTO `clientemascotas` (`id`, `id_mascota`, `id_cliente`) VALUES
 (17, 25, 2),
 (23, 31, 2),
 (25, 33, 3),
-(26, 34, 3);
+(26, 34, 3),
+(27, 35, 2);
 
 -- --------------------------------------------------------
 
@@ -120,7 +125,8 @@ INSERT INTO `mascota` (`id`, `nombre`, `especie`, `raza`, `edad`, `genero`) VALU
 (25, 'Michi', 'Felino', 'Albino', 2, 'Hembra'),
 (31, 'Manchitas', 'Canino', 'Pastor alemán', 1, 'Macho'),
 (33, 'Pikachu', 'Felino', 'Naranja', 2, 'Macho'),
-(34, 'Nyamero', 'Felino', 'Blanco', 2, 'Hembra');
+(34, 'Nyamero', 'Felino', 'Blanco', 2, 'Hembra'),
+(35, 'Alfeo', 'Canino', 'Aguacatero', 9, 'Macho');
 
 -- --------------------------------------------------------
 
@@ -180,6 +186,13 @@ CREATE TABLE `veterinariocitas` (
   `id_veterinario` int NOT NULL,
   `id_cita` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `veterinariocitas`
+--
+
+INSERT INTO `veterinariocitas` (`id`, `id_veterinario`, `id_cita`) VALUES
+(14, 2, 44);
 
 --
 -- Índices para tablas volcadas
@@ -242,7 +255,7 @@ ALTER TABLE `veterinariocitas`
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id_cita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_cita` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
@@ -254,13 +267,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `clientemascotas`
 --
 ALTER TABLE `clientemascotas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `registro_medico`
@@ -278,7 +291,7 @@ ALTER TABLE `veterinario`
 -- AUTO_INCREMENT de la tabla `veterinariocitas`
 --
 ALTER TABLE `veterinariocitas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
