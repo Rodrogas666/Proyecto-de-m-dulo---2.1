@@ -84,7 +84,7 @@ body {
 
 .tabla {
   display: grid;
-  grid-template-columns: repeat(5, 5fr);
+  grid-template-columns: repeat(4, 4fr);
   grid-template-rows: auto;
   grid-gap: 3rem;
   width: 80%;
