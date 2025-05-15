@@ -1,7 +1,7 @@
 <?php
+include_once '../../../classes/Cliente.php';
 
-session_start();
-session_destroy();
+Cliente::cerrar_sesion();
 
 header('Location:../views/form_login.php');
 

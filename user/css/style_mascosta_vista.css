@@ -27,7 +27,7 @@
 
 .cards{
     background-color: rgb(255, 255, 255);
-    width: 20rem;
+    width: 25rem;
     height: 27rem;
     display: flex;
     flex-direction: column;

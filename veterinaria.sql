@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `citas` (
   `id_cita` int NOT NULL,
-  `asunto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `asunto` text CHARACTER SET utf8mb4  NOT NULL,
   `fecha` datetime NOT NULL,
   `estado` varchar(255) NOT NULL,
   `id_cliente` int NOT NULL,
   `id_mascota` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `citas`
@@ -60,7 +60,7 @@ CREATE TABLE `cliente` (
   `apellido` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
   `contrasenia` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cliente`
@@ -81,7 +81,7 @@ CREATE TABLE `clientemascotas` (
   `id` int NOT NULL,
   `id_mascota` int NOT NULL,
   `id_cliente` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `clientemascotas`
@@ -111,7 +111,7 @@ CREATE TABLE `mascota` (
   `raza` varchar(255) NOT NULL,
   `edad` int NOT NULL,
   `genero` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `mascota`
@@ -141,7 +141,7 @@ CREATE TABLE `registro_medico` (
   `enfermedades` text NOT NULL,
   `medicamentos` text NOT NULL,
   `id_mascota` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `registro_medico`
@@ -163,8 +163,8 @@ CREATE TABLE `veterinario` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `correo` varchar(255) NOT NULL,
-  `contrasenia` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `contrasenia` varchar(255) CHARACTER SET utf8mb4  NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `veterinario`
@@ -185,7 +185,7 @@ CREATE TABLE `veterinariocitas` (
   `id` int NOT NULL,
   `id_veterinario` int NOT NULL,
   `id_cita` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `veterinariocitas`
