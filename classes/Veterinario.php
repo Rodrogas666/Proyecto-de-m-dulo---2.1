@@ -12,6 +12,10 @@ class Veterinario
         if ($_POST) {
             $id_cita = isset($_POST['id']) ? $_POST['id'] : '';
             $accion = isset($_POST['accion']) ? $_POST['accion'] : '';
+            // echo '<pre>';
+            // var_dump($_POST);
+            // echo '</pre>';
+            // exit;
             $estado = 'Taken';
 
 

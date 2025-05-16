@@ -2,24 +2,11 @@
 session_start();
 
 
-if(isset($_SESSION['veterinario'])){
-    $id_registro = $_GET['id_registro'];
-    $id_mascota = $_GET['id_mascota'];
+if (isset($_SESSION['veterinario'])) {
+
 
     include_once('../../config/bd.php');
+    include_once('../../classes/RegistroMedico.php');
     $conexionBD = BD::crearInstancia();
-
-
-    $sql = "DELETE FROM registro_medico WHERE id=$id_registro";
-
-    $consulta = $conexionBD->prepare($sql);
-    $consulta->execute();
-
-    echo "<script>
-            alert('Registro eliminado !')
-            window.location.href = 'view_mascotaHistorial.php?id=$id_mascota'
-            </script>";
-
+    RegistroMedico::eliminarRegistroMedico($conexionBD);
 }
-
-?>

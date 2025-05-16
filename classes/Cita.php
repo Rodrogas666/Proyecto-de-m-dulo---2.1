@@ -9,7 +9,20 @@ class Cita
     private int $id_cliente;
     private int $id_mascota;
 
-    
+
+    public static function finalizarCita($conexionBD)
+    {
+        $idCita = $_GET['id'];
+        $sql = "UPDATE CITAS SET estado='Done' WHERE id_cita = $idCita";
+        $consulta = $conexionBD->prepare($sql);
+        $consulta->execute();
+
+                echo "<script>
+        alert('Cita terminada :)')
+        window.location.href = 'dashboard_citas_accepted.php'
+        </script>";
+    }
+
     public static function obtenerCitasPorCliente($conexionBD, $cliente)
     {
         $id_cliente = $cliente->getId();
