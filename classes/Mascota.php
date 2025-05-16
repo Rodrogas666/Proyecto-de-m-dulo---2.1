@@ -135,7 +135,7 @@ class Mascota
         if ($consulta_check->fetchColumn() > 0) {
             echo "<script>
             alert('Esta mascota ya está asociada a este cliente')
-            window.location.pathname = '/user/php/views/mascota_vista.php'
+            window.location.pathname = 'user/php/views/mascota_vista.php'
             </script>";
             return;
         }
@@ -148,7 +148,7 @@ class Mascota
 
         echo "<script>
         alert('Mascota agregada al cliente :)')
-        window.location.pathname = '/user/php/views/mascota_vista.php'
+        window.location.pathname = 'user/php/views/mascota_vista.php'
         </script>";
     }
 

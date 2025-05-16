@@ -9,12 +9,24 @@ class Cita
     private int $id_cliente;
     private int $id_mascota;
 
+    
     public static function obtenerCitasPorCliente($conexionBD, $cliente)
     {
         $id_cliente = $cliente->getId();
         $sql2 = "SELECT * from citas c 
         inner join mascota m  on c.id_mascota=m.id
         inner join clientemascotas cm on cm.id_mascota=c.id_mascota WHERE cm.id_cliente = $id_cliente";
+        $consulta = $conexionBD->prepare($sql2);
+        $consulta->execute();
+        return $consulta->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function obtenerCitasNotTaken($conexionBD)
+    {
+        $sql2 = "SELECT * from citas c 
+            inner join mascota m  on c.id_mascota=m.id
+            where estado = 'Not taken'
+        ";
         $consulta = $conexionBD->prepare($sql2);
         $consulta->execute();
         return $consulta->fetchAll(PDO::FETCH_ASSOC);
