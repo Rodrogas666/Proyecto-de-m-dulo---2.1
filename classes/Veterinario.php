@@ -7,6 +7,37 @@ class Veterinario
     private string $correo;
     private string $contrasenia;
 
+    public static function inviteVeterinarioCita($conexionBD)
+    {
+        $id_veterinario = $_SESSION['veterinario'];
+        $id_cita = $_GET['id_cita'];
+
+        // Verificar si ya existe el registro
+        $sql_check = "SELECT COUNT(*) FROM veterinariocitas WHERE id_veterinario = :id_veterinario AND id_cita = :id_cita";
+        $consulta_check = $conexionBD->prepare($sql_check);
+        $consulta_check->bindParam(':id_veterinario', $id_veterinario);
+        $consulta_check->bindParam(':id_cita', $id_cita);
+        $consulta_check->execute();
+        $existe = $consulta_check->fetchColumn();
+
+        if ($existe) {
+            echo "<script>
+            alert('El veterinario ya está invitado a esta cita.');
+            window.location.pathname = 'veterinario/php/dashboard.php';
+            </script>";
+            exit;
+        }
+
+        $sql3 = "INSERT INTO veterinariocitas (id, id_veterinario, id_cita) VALUES (NULL, :id_veterinario, :id_cita)";
+        $consulta3 = $conexionBD->prepare($sql3);
+        $consulta3->bindParam(':id_veterinario', $id_veterinario);
+        $consulta3->bindParam(':id_cita', $id_cita);
+        $consulta3->execute();
+
+        header("Location: /veterinario/php/dashboard_citas_accepted.php");
+        exit;
+    }
+
     public static function tomarCitaVeterinario($conexionBD, $id_veterinario)
     {
         if ($_POST) {

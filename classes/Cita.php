@@ -10,6 +10,22 @@ class Cita
     private int $id_mascota;
 
 
+    public static function obtenerCitasTaken($conexionBD)
+    {
+        $id_veterinario = $_SESSION['veterinario'];
+
+        $sql = "SELECT * FROM `veterinariocitas` 
+            INNER JOIN citas ON veterinariocitas.id_cita = citas.id_cita 
+            INNER JOIN mascota ON mascota.id = citas.id_mascota 
+            WHERE citas.estado = 'Taken'
+            and id_veterinario = $id_veterinario 
+            ";
+        $consulta = $conexionBD->prepare($sql);
+        $consulta->execute();
+        $vetCitas = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        return $vetCitas;
+    }
+
     public static function finalizarCita($conexionBD)
     {
         $idCita = $_GET['id'];
@@ -17,7 +33,7 @@ class Cita
         $consulta = $conexionBD->prepare($sql);
         $consulta->execute();
 
-                echo "<script>
+        echo "<script>
         alert('Cita terminada :)')
         window.location.href = 'dashboard_citas_accepted.php'
         </script>";

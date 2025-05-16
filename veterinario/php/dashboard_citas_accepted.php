@@ -6,26 +6,30 @@ include_once('mis_citas_vet.php');
 ?>
 <link rel="stylesheet" href="../../user/css/styles_index.css">
 <style>
-    .titulo{
+    .titulo {
         font-weight: bold;
         padding-left: 2rem;
         padding-top: 2rem;
     }
-    .contenedor_citas{
+
+    .contenedor_citas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .citas{
+
+    .citas {
         border: 1px solid black;
         padding: 1rem;
         margin: 1rem;
         border-radius: 10px;
     }
-    .main{
+
+    .main {
         margin: 2rem;
     }
 
-    .btn-finalizar{
+    .btn-finalizar,
+    .btn-invitar {
         border-radius: 5px;
         border: none;
         width: 5.8rem;
@@ -37,18 +41,22 @@ include_once('mis_citas_vet.php');
         transition: 0.5s;
     }
 
-    .btn-finalizar:hover{
+    .btn-invitar {
+        background-color: rgb(16, 176, 77);
+    }
+
+    .btn-finalizar:hover {
         background-color: #ffffff;
         border: solid 2px #EE1E09;
         color: #EE1E09;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: white;
     }
 
-    a:hover{
+    a:hover {
         text-decoration: none;
         color: #EE1E09;
     }
@@ -60,18 +68,28 @@ include_once('mis_citas_vet.php');
     <br>
     <br>
     <div class="contenedor_citas">
-    <?php foreach ($vetCitas as $cita) { ?>
-        <div class="citas">
-            <p> <span style="font-weight:bold;">Estado:</span> <?php echo $cita['estado'] ?></p>
-            <p> <span style="font-weight:bold;">Asunto:</span> <?php echo $cita['asunto'] ?></p>
-            <p> <span style="font-weight:bold;">Fecha:</span> <?php echo $cita['fecha'] ?></p>
-            <p> <span style="font-weight:bold;">Mascota:</span> <?php echo $cita['nombre'] ?></p>
-            <br>
-            <br>
-            <button class="btn-finalizar"><a href=".logic_finalizarCita.php?id=<?=$cita['id_cita']?>"> Finalizar cita</a></button>
-        </div>
-            
-    <?php } ?>
+        <?php foreach ($vetCitas as $cita) { ?>
+            <div class="citas">
+                <p> <span style="font-weight:bold;">Estado:</span> <?php echo $cita['estado'] ?></p>
+                <p> <span style="font-weight:bold;">Asunto:</span> <?php echo $cita['asunto'] ?></p>
+                <p> <span style="font-weight:bold;">Fecha:</span> <?php echo $cita['fecha'] ?></p>
+                <p> <span style="font-weight:bold;">Mascota:</span> <?php echo $cita['nombre'] ?></p>
+                <br>
+                <br>
+                <button class="btn-finalizar"><a href=".logic_finalizarCita.php?id=<?= $cita['id_cita'] ?>"> Finalizar cita</a></button>
+                <button class="btn-invitar" onclick="copyToClipboard(window.location.origin + '/veterinario/php/inviteCita.php?id_cita=<?= $cita['id_cita'] ?>')">Invitar cita</button>
+                <script>
+                    function copyToClipboard(text) {
+                        navigator.clipboard.writeText(text).then(function() {
+                            alert('Enlace copiado al portapapeles');
+                        }, function(err) {
+                            alert('No se pudo copiar el enlace');
+                        });
+                    }
+                </script>
+            </div>
+
+        <?php } ?>
     </div>
 </div>
 <?php
